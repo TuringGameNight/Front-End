@@ -1,0 +1,16 @@
+language: ruby
+rbenv:
+- 2.5.3
+addons:
+  postgresql: 9.6
+script:
+- bundle exec rails db:create RAILS_ENV=test
+- bundle exec rspec
+deploy:
+  provider: heroku
+  app: TuringGameNight
+  api_key:
+    secure: HEROKU_DEPLOY_KEY
+  on:
+    repo: TuringGameNight/Front-End
+  run: rails db:migrate
