@@ -10,7 +10,7 @@ deploy:
   provider: heroku
   app: TuringGameNight
   api_key:
-    secure: ENV[HEROKU_DEPLOY_KEY]
+    secure: HEROKU_DEPLOY_KEY
   on:
     repo: TuringGameNight/Front-End
   run: rails db:migrate
