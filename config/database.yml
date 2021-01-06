@@ -17,11 +17,8 @@
 development:
   adapter: postgresql
   encoding: unicode
-<<<<<<< HEAD
-  database: front_end_app_development
-=======
   database: front_end_development
->>>>>>> 9e37094894bfae5921b3c92227411ae68c226dd0
+
   pool: 5
   username:
   password:
