@@ -23,6 +23,8 @@ gem 'jbuilder', '~> 2.5'
 
 gem 'faraday'
 gem 'figaro'
+gem 'pg'
+gem 'travis'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
@@ -45,6 +47,7 @@ end
 group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
   gem 'listen', '>= 3.0.5', '< 3.2'
+  gem 'rubocop-rails'
   gem 'web-console', '>= 3.3.0'
 end
 
