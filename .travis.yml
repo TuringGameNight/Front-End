@@ -8,7 +8,7 @@ script:
 - bundle exec rspec
 deploy:
   provider: heroku
-  app: aqueous-chamber-62045
+  app: TuringGameNight
   api_key:
     secure: ENV[HEROKU_DEPLOY_KEY]
   on:
