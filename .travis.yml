@@ -8,7 +8,9 @@ script:
 - bundle exec rspec
 deploy:
   provider: heroku
-  app: Front-End
+  app: aqueous-chamber-62045
+  api_key:
+    secure: ENV[HEROKU_DEPLOY_KEY]
   on:
     repo: TuringGameNight/Front-End
   run: rails db:migrate
