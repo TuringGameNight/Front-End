@@ -10,7 +10,6 @@ AllCops:
     - 'log/**/*'
     - 'node_modules/**/*'
     - 'public/**/*'
-    # - 'spec/**/*'
     - 'tmp/**/*'
     - 'vendor/**/*'
     - './*'
