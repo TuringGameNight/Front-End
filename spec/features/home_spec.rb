@@ -13,7 +13,7 @@ describe 'As a user' do
         expect(page).to have_content("Stop leaving organizing a game night to a roll of the dice. Game Night will have you and your friends playing your favorite board games in no time.")
       end
 
-      within "#auth-link" do
+      within "#auth-button" do
         expect(page).to have_button("Login with Google")
       end
     end
