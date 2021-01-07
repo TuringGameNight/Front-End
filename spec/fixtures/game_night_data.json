@@ -11,12 +11,20 @@
       },
       "relationships": {
           "friends": {
-              "data": {
+              "data": [
+                {
                   "id": "9",
                   "type": "user",
                   "name": "Sean",
                   "image": "image_url"
-              }
+                },
+                {
+                  "id": "10",
+                  "type": "user",
+                  "name": "Robert",
+                  "image": "image_url"
+                }
+              ]
           }
       }
   }

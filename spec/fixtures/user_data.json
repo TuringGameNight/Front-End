@@ -3,18 +3,26 @@
       "id": "200",
       "type": "user",
       "attributes": {
-          "id": 200,
+        "id": "200",
           "name": "Jake",
           "image": "image_url"
       },
       "relationships": {
           "friends": {
-              "data": {
+              "data": [
+                {
                   "id": "9",
                   "type": "user",
                   "name": "Sean",
                   "image": "image_url"
-              }
+                },
+                {
+                  "id": "10",
+                  "type": "user",
+                  "name": "Robert",
+                  "image": "image_url"
+                }
+              ]
           }
       }
   }
