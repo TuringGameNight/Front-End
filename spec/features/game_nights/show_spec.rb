@@ -15,12 +15,12 @@ describe 'As a user' do
 
       visit '/game-nights/2'
 
-      expect(page).to have_content('D&D')
+      expect(page).to have_content('Dungeons & Dragons')
       expect(page).to have_content('01-06-2021')
       expect(page).to have_content('10')
       expect(page).to have_content('Jake')
       expect(page).to have_content('Sean')
-      expect(page).to have_link('Dungeons And Dragons')
+      expect(page).to have_link('Dungeons & Dragons')
     end
   end
 end
