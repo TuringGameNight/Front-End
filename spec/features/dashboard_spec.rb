@@ -18,15 +18,18 @@ describe 'As an authenticated user' do
       within('#user-games') do
         expect(page).to have_content('Dungeons & Dragons')
         expect(page).to have_content('Pandemic')
+        expect(page).to have_button('Add a Game')
       end
 
       within('#game-nights') do
         expect(page).to have_content('Dwarves Rule 2021')
+        expect(page).to have_button('Add a Game Night')
       end
 
       within('#friends') do
         expect(page).to have_content('Sean')
         expect(page).to have_content('Robert')
+        expect(page).to have_button('Add Friend')
       end
     end
   end
