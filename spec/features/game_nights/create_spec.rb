@@ -23,6 +23,10 @@ describe 'As a user' do
       stub_request(:post, "#{ENV['BACKEND_URL']}/api/v1/game-nights")
         .to_return(status: 200, body: json_response)
 
+      json_response2 = File.read('spec/fixtures/game_night_show.json')
+      stub_request(:get, "#{ENV['BACKEND_URL']}/api/v1/game-nights/2")
+        .to_return(status: 200, body: json_response2)
+
       fill_in :name, with: 'D&D'
       fill_in :date, with: Time.zone.today.strftime('%m-%d-%Y')
       find(:css, "#friends_9[value='9']").set(true)

@@ -1,0 +1,12 @@
+<h1><%= @game_night.name %></h1>
+<h3><%= @game_night.date %></h3>
+<h3><%= @game_night.number_of_games %></h3>
+<h3><%= @user.name %></h3>
+
+<% @game_night.friends.each do |friend| %>
+  <%= friend.name %>
+<% end %><br>
+
+<% @game_night.games.each do |game| %>
+  <%= link_to "#{game.name}", "/game/#{game.id}" %>
+<% end %>
