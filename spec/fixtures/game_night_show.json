@@ -1,0 +1,29 @@
+{
+  "data": {
+      "id": "2",
+      "type": "game_night",
+      "attributes": {
+          "id": "2",
+          "name": "D&D",
+          "date": "01-06-2021",
+          "user_id": "200",
+          "number_of_games": "10"
+      },
+      "relationships": {
+          "friends": {
+              "data": {
+                  "id": "9",
+                  "type": "user",
+                  "name": "Sean",
+                  "image": "image_url"
+              }
+          },
+          "games": {
+            "data": {
+              "id": "3",
+              "name": "Dungeons And Dragons"
+            }
+          }
+      }
+  }
+}
