@@ -1,7 +1,7 @@
 class GameNightFacade
   def self.create_game_night(data)
     json = GameNightService.create_game_night(data)
-    game_night = GameParty.new(json[:data])
+    game_night = GameParty.new(json[:data][:attributes])
     friends = json[:data][:relationships][:friends][:data].map do |data|
       Friend.new(data)
     end
@@ -11,7 +11,7 @@ class GameNightFacade
 
   def self.find_game_night(id)
     json = GameNightService.find_game_night(id)
-    game_night = GameParty.new(json[:data])
+    game_night = GameParty.new(json[:data][:attributes])
     friends = json[:data][:relationships][:friends].map do |data|
       Friend.new(data[1])
     end
