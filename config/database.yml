@@ -17,7 +17,7 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: front_end_app_development
+  database: front_end_development
   pool: 5
   username:
   password:
