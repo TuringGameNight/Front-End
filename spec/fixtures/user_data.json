@@ -23,6 +23,31 @@
                   "image": "image_url"
                 }
               ]
+          },
+          "games": {
+              "data": [
+                {
+                  "id": "22",
+                  "name": "Dungeons & Dragons",
+                  "image": "image_url"
+                },
+                {
+                  "id": "84",
+                  "name": "Pandemic",
+                  "image": "image_url"
+                }
+              ]
+          },
+          "game_nights": {
+              "data": [
+                {
+                  "id": "2",
+                  "name": "Dwarves Rule 2021",
+                  "date": "01-06-2021",
+                  "user_id": "200",
+                  "number_of_games": "10"
+                }
+              ]
           }
       }
   }

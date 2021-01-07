@@ -4,7 +4,7 @@
       "type": "game_night",
       "attributes": {
           "id": "2",
-          "name": "D&D",
+          "name": "Dungeons & Dragons",
           "date": "01-06-2021",
           "user_id": "200",
           "number_of_games": "10"
@@ -21,7 +21,7 @@
           "games": {
             "data": {
               "id": "3",
-              "name": "Dungeons And Dragons"
+              "name": "Dungeons & Dragons"
             }
           }
       }
