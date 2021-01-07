@@ -1,0 +1,21 @@
+{
+  "data": {
+      "id": "200",
+      "type": "user",
+      "attributes": {
+          "id": 200,
+          "name": "Jake",
+          "image": "image_url"
+      },
+      "relationships": {
+          "friends": {
+              "data": {
+                  "id": "9",
+                  "type": "user",
+                  "name": "Sean",
+                  "image": "image_url"
+              }
+          }
+      }
+  }
+}
