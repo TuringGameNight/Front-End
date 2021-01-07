@@ -1,9 +1,9 @@
 class User
   attr_reader :id, :name, :image, :friends, :games
   def initialize(data)
-    @id = data[:attributes]
-    @name = data[:attributes]
-    @image = data[:attributes]
+    @id = data[:attributes][:id]
+    @name = data[:attributes][:name]
+    @image = data[:attributes][:image]
     @friends = []
   end
 
