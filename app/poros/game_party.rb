@@ -3,10 +3,10 @@ class GameParty
 
   def initialize(data)
     @id = data[:id]
-    @name = data[:attributes][:name]
-    @date = data[:attributes][:date]
-    @user_id = data[:attributes][:user_id]
-    @number_of_games = data[:attributes][:number_of_games]
+    @name = data[:name]
+    @date = data[:date]
+    @user_id = data[:user_id]
+    @number_of_games = data[:number_of_games]
     @friends = []
     @games = []
   end
