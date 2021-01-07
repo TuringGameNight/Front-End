@@ -3,4 +3,8 @@ Rails.application.routes.draw do
   root 'home#index'
 
   resources :dashboard, only: [:index]
+  get "/game-nights/new", to: "game_nights#new"
+  post "/game-nights", to: "game_nights#create"
+  get "/game-nights/:id", to: "game_nights#show"
+
 end
