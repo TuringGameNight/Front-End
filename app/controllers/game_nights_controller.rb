@@ -8,6 +8,5 @@ class GameNightsController < ApplicationController
     redirect_to "/game-nights/#{game_night.id}"
   end
 
-  def show
-  end
+  def show; end
 end

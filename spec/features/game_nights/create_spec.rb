@@ -15,7 +15,7 @@ describe 'As a user' do
       find(:css, "#friends_9[value='9']").set(true)
       fill_in :number_of_games, with: 10
     end
-    it "When I fill out the form and submit it, I see my new game night" do
+    it 'When I fill out the form and submit it, I see my new game night' do
       visit '/game-nights/new'
 
       json_response = File.read('spec/fixtures/game_night_data.json')
