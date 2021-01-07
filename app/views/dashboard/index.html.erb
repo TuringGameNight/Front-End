@@ -1,8 +1,24 @@
 <div id="welcome-message">
+  <h1>Welcome <%= @user.name %>!</h1>
 </div>
 <div id="user-games">
+  <ul>
+    <% @user.games.each do |game| %>
+      <li><%= game.name %></li>
+    <% end %>
+  </ul>
 </div>
 <div id="game-nights">
+  <ul>
+    <% @user.game_nights.each do |game_night| %>
+      <li><%= game_night.name %></li>
+    <% end %>
+  </ul>
 </div>
 <div id="friends">
+  <ul>
+    <% @user.friends.each do |friend| %>
+      <li><%= friend.name %></li>
+    <% end %>
+  </ul>
 </div>
