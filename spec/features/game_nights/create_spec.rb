@@ -13,6 +13,7 @@ describe 'As a user' do
       fill_in :name, with: 'D&D'
       fill_in :date, with: Time.zone.today.strftime('%m-%d-%Y')
       find(:css, "#friends_9[value='9']").set(true)
+      find(:css, "#friends_10[value='10']").set(true)
       fill_in :number_of_games, with: 10
     end
     it 'When I fill out the form and submit it, I see my new game night' do
@@ -25,8 +26,8 @@ describe 'As a user' do
       fill_in :name, with: 'D&D'
       fill_in :date, with: Time.zone.today.strftime('%m-%d-%Y')
       find(:css, "#friends_9[value='9']").set(true)
+      find(:css, "#friends_10[value='10']").set(true)
       fill_in :number_of_games, with: 10
-
       click_on "Let's Play!"
       expect(current_path).to eq('/game-nights/2')
     end
