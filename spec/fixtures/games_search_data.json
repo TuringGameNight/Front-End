@@ -6,7 +6,7 @@
             "attributes": {
                 "id": 4,
                 "name": "Catan",
-                "playtime": "123"
+                "duration": "123"
             }
         },
         {
@@ -15,7 +15,7 @@
             "attributes": {
                 "id": 5,
                 "name": "Katan",
-                "playtime": "1234"
+                "duration": "1234"
             }
         }
     ]

@@ -1,0 +1,22 @@
+<%= form_with url: games_path, local: true do |f| %>
+
+  <%= f.label :name %>
+  <%= f.text_field :name %><br><br>
+
+  <%= f.label :game_type %>
+  <%= f.text_field :game_type %><br><br>
+
+  <%= f.label :description %>
+  <%= f.text_field :description %><br><br>
+
+  <%= f.label :min_age %>
+  <%= f.number_field :min_age %><br><br>
+
+  <%= f.label :duration %>
+  <%= f.number_field :duration %><br><br>
+
+  <%= f.label :image %>(Opt.)
+  <%= f.text_field :image %><br><br>
+
+  <%= f.submit "Suggest Game" %>
+<% end %>

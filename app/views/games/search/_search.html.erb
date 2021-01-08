@@ -2,7 +2,7 @@
   <table>
     <tr>
       <th>Game</th>
-      <th>Playtime</th>
+      <th>Duration</th>
       <th>Add Game</th>
     </tr>
     <div id='games-table'>
@@ -11,10 +11,10 @@
         <td class='title'>
           <p><%= link_to "#{game.name}", "/games/#{game.id}" %></p>
         </td>
-        <td class='playtime'>
-          <p><%= game.playtime %></p>
+        <td class='duration'>
+          <p><%= game.duration %></p>
         </td>
-        <td class='playtime'>
+        <td class='add-game'>
           <p><%= button_to "+", "/user/games/#{game.id}" %></p>
         </td>
       </tr>

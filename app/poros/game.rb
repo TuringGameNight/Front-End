@@ -1,11 +1,11 @@
 class Game
   attr_reader :id,
               :name,
-              :playtime
+              :duration
 
   def initialize(data)
     @id = data[:id]
     @name = data[:name]
-    @playtime = data[:playtime]
+    @duration = data[:duration]
   end
 end
