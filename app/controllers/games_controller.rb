@@ -16,5 +16,4 @@ class GamesController < ApplicationController
       render :new
     end
   end
-
 end

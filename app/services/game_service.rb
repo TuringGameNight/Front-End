@@ -1,12 +1,11 @@
 class GameService
-  def self.create_game(data, user)
+  def self.create_game(data, _user)
     body = { name: data[:name],
              game_type: data[:game_type],
              description: data[:description],
              min_age: data[:min_age],
              duration: data[:duration],
-             image: data[:image]
-            }
+             image: data[:image] }
 
     conn = Faraday.new("#{ENV['BACKEND_URL']}/api/v1/games")
 

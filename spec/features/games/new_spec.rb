@@ -9,8 +9,8 @@ describe 'As a user' do
     end
     it 'I can add a new game to the app' do
       body = File.read('spec/fixtures/add_game_data.json')
-      stub_request(:post, "#{ENV['BACKEND_URL']}/api/v1/games").
-         to_return(status: 200, body: body)
+      stub_request(:post, "#{ENV['BACKEND_URL']}/api/v1/games")
+        .to_return(status: 200, body: body)
 
       visit new_game_path
 
@@ -21,16 +21,16 @@ describe 'As a user' do
       fill_in :duration, with: 80
       fill_in :image, with: 'https://boardgamegeek.com/image/3918905/everdell'
 
-      click_on "Suggest Game"
+      click_on 'Suggest Game'
 
-      expect(page).to have_content("Game created successfully and added to your shelf!")
+      expect(page).to have_content('Game created successfully and added to your shelf!')
       expect(current_path).to eq(dashboard_index_path)
     end
 
     it 'I cannot add a new game if require data (desc) missing' do
       body = File.read('spec/fixtures/add_game_data.json')
-      stub_request(:post, "#{ENV['BACKEND_URL']}/api/v1/games").
-         to_return(status: 403, body: body)
+      stub_request(:post, "#{ENV['BACKEND_URL']}/api/v1/games")
+        .to_return(status: 403, body: body)
 
       visit new_game_path
 
@@ -40,9 +40,9 @@ describe 'As a user' do
       fill_in :duration, with: 80
       fill_in :image, with: 'https://boardgamegeek.com/image/3918905/everdell'
 
-      click_on "Suggest Game"
+      click_on 'Suggest Game'
 
-      expect(page).to have_content("Please fill in all required fields.")
+      expect(page).to have_content('Please fill in all required fields.')
     end
   end
 end
