@@ -1,0 +1,22 @@
+{
+    "data": [
+        {
+            "id": "4",
+            "type": "game",
+            "attributes": {
+                "id": 4,
+                "name": "Catan",
+                "duration": "123"
+            }
+        },
+        {
+            "id": "5",
+            "type": "game",
+            "attributes": {
+                "id": 5,
+                "name": "Katan",
+                "duration": "1234"
+            }
+        }
+    ]
+}

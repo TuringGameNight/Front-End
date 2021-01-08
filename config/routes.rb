@@ -9,5 +9,9 @@ Rails.application.routes.draw do
   get "/game-nights/:id", to: "game_nights#show"
 
   resources :games, only: [:new, :create]
+  namespace :games do
+    get '/search', to: "search#new"
+    get '/search/results', to: "search#index"
+  end
 
 end
