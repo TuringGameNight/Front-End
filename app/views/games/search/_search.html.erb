@@ -1,0 +1,25 @@
+<center>
+  <table>
+    <tr>
+      <th>Game</th>
+      <th>Playtime</th>
+      <th>Add Game</th>
+    </tr>
+    <div id='games-table'>
+      <% @results.each do |game|%>
+      <tr>
+        <td class='title'>
+          <p><%= link_to "#{game.name}", "/games/#{game.id}" %></p>
+        </td>
+        <td class='playtime'>
+          <p><%= game.playtime %></p>
+        </td>
+        <td class='playtime'>
+          <p><%= button_to "+", "/user/games/#{game.id}" %></p>
+        </td>
+      </tr>
+      <% end%>
+    </div>
+  </table>
+  <p> <%= link_to "Don't see your game? Add it!", "/game/new" %></p>
+</center>
