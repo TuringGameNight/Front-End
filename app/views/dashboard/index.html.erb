@@ -2,7 +2,7 @@
   <h1>Welcome <%= @user.name %>!</h1>
 </div>
 <div id="user-games">
-  <%= button_to 'Add a Game', new_game_path %>
+  <%= button_to 'Add a Game', '/games/search', method: :get %>
   <ul>
     <% @user.games.each do |game| %>
       <li><%= game.name %></li>
