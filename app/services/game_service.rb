@@ -1,5 +1,5 @@
 class GameService
-  def self.create_game(data)
+  def self.create_game(data, user)
     body = { name: data[:name],
              game_type: data[:game_type],
              description: data[:description],
@@ -13,7 +13,5 @@ class GameService
     response = conn.post do |request|
       request.body = body
     end
-
-    JSON.parse(response.body, symbolize_names: true)
   end
 end
