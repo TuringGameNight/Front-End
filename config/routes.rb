@@ -8,6 +8,6 @@ Rails.application.routes.draw do
   post "/game-nights", to: "game_nights#create"
   get "/game-nights/:id", to: "game_nights#show"
 
-  resources :game, only: [:new, :create]
+  resources :games, only: [:new, :create]
 
 end
