@@ -25,6 +25,7 @@ gem 'jquery-rails'
 gem 'faraday'
 gem 'figaro'
 gem 'travis'
+gem 'omniauth-google-oauth2'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
