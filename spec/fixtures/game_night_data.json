@@ -16,13 +16,17 @@
                   "id": "9",
                   "type": "user",
                   "name": "Sean",
-                  "image": "image_url"
+                  "email": "sean@example.com",
+                  "image": "image_url",
+                  "status": "accepted"
                 },
                 {
                   "id": "10",
                   "type": "user",
                   "name": "Robert",
-                  "image": "image_url"
+                  "email": "robert@example.com",
+                  "image": "image_url",
+                  "status": "pending"
                 }
               ]
           }

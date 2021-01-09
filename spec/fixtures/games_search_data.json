@@ -4,18 +4,28 @@
             "id": "4",
             "type": "game",
             "attributes": {
-                "id": 4,
+                "id": "4",
                 "name": "Catan",
-                "duration": "123"
+                "game_type": "Board game",
+                "description": "The world we are in right now.",
+                "age_range": "12",
+                "duration": "120",
+                "num_players": "6",
+                "image": "image"
             }
         },
         {
             "id": "5",
             "type": "game",
             "attributes": {
-                "id": 5,
+                "id": "5",
                 "name": "Katan",
-                "duration": "1234"
+                "game_type": "Board game",
+                "description": "The world we are in right now.",
+                "age_range": "12",
+                "duration": "120",
+                "num_players": "6",
+                "image": "image"
             }
         }
     ]

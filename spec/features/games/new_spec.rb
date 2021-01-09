@@ -17,7 +17,7 @@ describe 'As a user' do
       fill_in :name, with: 'Everdell'
       fill_in :game_type, with: 'Board game'
       fill_in :description, with: 'Use resources to build a village of critters and constructions in this woodland game.'
-      fill_in :min_age, with: 13
+      fill_in :age_range, with: 13
       fill_in :duration, with: 80
       fill_in :image, with: 'https://boardgamegeek.com/image/3918905/everdell'
 
@@ -36,7 +36,7 @@ describe 'As a user' do
 
       fill_in :name, with: 'Everdell'
       fill_in :game_type, with: 'Board game'
-      fill_in :min_age, with: 13
+      fill_in :age_range, with: 13
       fill_in :duration, with: 80
       fill_in :image, with: 'https://boardgamegeek.com/image/3918905/everdell'
 

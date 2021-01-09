@@ -7,7 +7,7 @@
       "duration": "80",
       "game_type": "Board game",
       "image": "https://boardgamegeek.com/image/3918905/everdell",
-      "min_age": "13",
+      "age_range": "13",
       "name": "Everdell"
     }
   }
