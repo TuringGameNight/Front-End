@@ -17,7 +17,7 @@ describe 'As a user' do
       fill_in :name, with: 'Everdell'
       fill_in :game_type, with: 'Board game'
       fill_in :description, with: 'Use resources to build a village of critters and constructions in this woodland game.'
-      fill_in :min_age, with: 13
+      fill_in :age_range, with: 13
       fill_in :duration, with: 80
       fill_in :image, with: 'https://boardgamegeek.com/image/3918905/everdell'
 
@@ -36,13 +36,17 @@ describe 'As a user' do
 
       fill_in :name, with: 'Everdell'
       fill_in :game_type, with: 'Board game'
-      fill_in :min_age, with: 13
+      fill_in :age_range, with: 13
       fill_in :duration, with: 80
       fill_in :image, with: 'https://boardgamegeek.com/image/3918905/everdell'
 
       click_on 'Suggest Game'
 
       expect(page).to have_content('Please fill in all required fields.')
+    end
+
+    it 'I cannot add a game that already exists in the database' do
+      # can we do this successfully? Should we do a "Do any of these games match?" feature?
     end
   end
 end
