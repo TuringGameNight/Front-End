@@ -5,7 +5,13 @@ class GameNightsController < ApplicationController
 
   def create
     game_night = GameNightFacade.create_game_night(params)
-    redirect_to "/game-nights/#{game_night.id}"
+    if game_night
+      flash[:success] = 'Game night created successfully!'
+      redirect_to "/game-nights/#{game_night.id}"
+    else
+      flash.now[:error] = 'Please fill in all required fields.'
+      render :new
+    end
   end
 
   def show

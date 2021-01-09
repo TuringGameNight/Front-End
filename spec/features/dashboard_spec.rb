@@ -8,7 +8,7 @@ describe 'As an authenticated user' do
         .to_return(status: 200, body: json_response1)
     end
 
-    it 'has a welcome message, a list of my game nights, a list of my games and a list of my friends' do
+    it 'I see a welcome message, a list of my game nights, a list of my games and a list of my friends' do
       visit dashboard_index_path
 
       within('#welcome-message') do
@@ -31,6 +31,9 @@ describe 'As an authenticated user' do
         expect(page).to have_content('Robert')
         expect(page).to have_button('Add Friend')
       end
+    end
+
+    xit 'If I am not logged in, I am taken to the homepage' do
     end
   end
 end
