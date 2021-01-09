@@ -16,4 +16,8 @@ class UserFacade
     user.add_game_nights(game_nights)
     user
   end
+
+  def self.add_game(game_id)
+    UserService.add_game(game_id)
+  end
 end
