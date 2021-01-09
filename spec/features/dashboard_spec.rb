@@ -34,7 +34,6 @@ describe 'As an authenticated user' do
     end
 
     xit 'If I am not logged in, I am taken to the homepage' do
-
     end
   end
 end

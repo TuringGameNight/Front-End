@@ -2,7 +2,6 @@ require 'rails_helper'
 
 describe 'As a user' do
   describe 'When I visit /game-nights/new' do
-
     before :each do
       json_response = File.read('spec/fixtures/user_data.json')
       stub_request(:get, "#{ENV['BACKEND_URL']}/api/v1/users/200")
@@ -40,7 +39,7 @@ describe 'As a user' do
     end
 
     xit 'If I do not add the correct data (no friends), no game night' do
-      #skipping this one for now, we need to deal with a 403 in the facade
+      # skipping this one for now, we need to deal with a 403 in the facade
       visit '/game-nights/new'
 
       json_response = File.read('spec/fixtures/empty_results.json')
@@ -53,7 +52,7 @@ describe 'As a user' do
 
       click_on "Let's Play!"
 
-      expect(page).to have_content("Please fill out all required fields")
+      expect(page).to have_content('Please fill out all required fields')
     end
   end
 end

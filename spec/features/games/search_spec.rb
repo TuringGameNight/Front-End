@@ -44,7 +44,7 @@ describe 'As a user' do
 
       json_empty = File.read('spec/fixtures/empty_results.json')
       stub_request(:get, "#{ENV['BACKEND_URL']}/api/v1/games/search?search=bmmf8")
-        .to_return(status: 200, body: json_empty )
+        .to_return(status: 200, body: json_empty)
 
       within('#user-games') do
         click_on 'Add a Game'
@@ -60,6 +60,5 @@ describe 'As a user' do
     xit 'When I search for a single letter or common word, I am restricted to X results' do
       # how many results should we show and how do we paginate?
     end
-
   end
 end
