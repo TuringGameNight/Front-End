@@ -7,7 +7,7 @@
     </tr>
     <div id='games-table'>
       <% @results.each do |game|%>
-      <tr>
+      <tr id="game-<%= game.id %>">
         <td class='title'>
           <p><%= link_to "#{game.name}", "/games/#{game.id}" %></p>
         </td>
@@ -15,7 +15,7 @@
           <p><%= game.duration %></p>
         </td>
         <td class='add-game'>
-          <p><%= button_to "+", "/user/games/#{game.id}" %></p>
+          <p><%= button_to "+", "/users/games/#{game.id}" %></p>
         </td>
       </tr>
       <% end%>

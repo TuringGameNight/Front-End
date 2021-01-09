@@ -13,5 +13,9 @@ Rails.application.routes.draw do
     get '/search', to: "search#new"
     get '/search/results', to: "search#index"
   end
+  
+  namespace :users do
+    post '/games/:id', to: 'games#create'
+  end
 
 end
