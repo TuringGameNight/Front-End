@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>GameNight</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= content_for?(:title) ? yield(:title) : "GameNight" %></title>
+    <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "GameNight" %>">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,11 +12,16 @@
   </head>
 
   <body>
+   <header>
+      <%= render 'layouts/navigation' %>
+    </header>
     <% flash.each do |name, msg| %>
       <div class= "<%=name%>-flash">
         <p><%= msg %></p>
       </div>
     <% end %>
-    <%= yield %>
+    <main role="main">
+    <%= content_for?(:content) ? yield(:content) : yield %>
+    </main>
   </body>
 </html>
