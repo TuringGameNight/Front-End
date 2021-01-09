@@ -4,7 +4,7 @@ class GameService
     results = conn.get
     JSON.parse(results.body, symbolize_names: true)
   end
-  
+
   def self.create_game(data, _user)
     body = { name: data[:name],
              game_type: data[:game_type],
