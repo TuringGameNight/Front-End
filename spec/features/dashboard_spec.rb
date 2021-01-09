@@ -33,8 +33,8 @@ describe 'As an authenticated user' do
       end
     end
 
-    it 'If I am not logged in, I am taken to the homepage' do
-      
+    xit 'If I am not logged in, I am taken to the homepage' do
+
     end
   end
 end

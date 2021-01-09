@@ -42,9 +42,9 @@ describe 'As a user' do
       # should have message to try another search or add a game call out
       visit '/dashboard'
 
-      json_response2 = File.read('spec/fixtures/games_search_data.json')
+      json_empty = File.read('spec/fixtures/empty_results.json')
       stub_request(:get, "#{ENV['BACKEND_URL']}/api/v1/games/search?search=bmmf8")
-        .to_return(status: 404, body: json_response2)
+        .to_return(status: 200, body: json_empty )
 
       within('#user-games') do
         click_on 'Add a Game'
