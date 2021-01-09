@@ -11,6 +11,6 @@ class SessionsController < ApplicationController
     end
     user_data = JSON.parse(response.body, symbolize_names: true)
 
-    session[:user] = user_data
+    session[:user] = user_data    
   end
 end
