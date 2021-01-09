@@ -9,12 +9,8 @@ class SessionsController < ApplicationController
     response = Faraday.post("#{ENV['BACKEND_URL']}/api/v1/users") do |request|
       request.body = JSON.generate(body)
     end
-    binding.pry
     user_data = JSON.parse(response.body, symbolize_names: true)
-    user = User.new(user_data)
 
-    # session[:user] = user
-    #
-    # redirect_to dashboard_index_path
+    session[:user] = user_data
   end
 end
