@@ -2,7 +2,7 @@ class Users::GamesController < ApplicationController
   def create
     response = UserFacade.add_game(params[:id])
     if response.status == 200
-      flash[:success] = 'Game created successfully and added to your shelf!'
+      flash[:success] = 'Game added to your shelf!'
       redirect_to dashboard_index_path
     else
       # how do we deal with errors coming from the back end? This will need to change.
