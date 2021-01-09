@@ -4,6 +4,10 @@ class ApplicationController < ActionController::Base
   helper_method :current_user
 
   def current_user
-    @current_user ||= session[:user]
+    if session[:user]
+      @current_user ||= User.new(session[:user])
+    else
+      redirect_to root_path
+    end 
   end
 end
