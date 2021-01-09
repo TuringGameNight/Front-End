@@ -3,6 +3,7 @@
       "id": "200",
       "type": "user",
       "attributes": {
+          "id": "200",
           "google_id": "200",
           "name": "Jake",
           "email": "jake@statefarm.com",
