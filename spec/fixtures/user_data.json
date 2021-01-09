@@ -3,9 +3,14 @@
       "id": "200",
       "type": "user",
       "attributes": {
-        "id": "200",
+          "id": "200",
+          "google_id": "200",
           "name": "Jake",
-          "image": "image_url"
+          "email": "jake@statefarm.com",
+          "image": "image_url",
+          "google_token": "TOKEN",
+          "auth_token": "AUTH_TOKEN",
+          "refresh_token": "REFRESH_TOKEN"
       },
       "relationships": {
           "friends": {
@@ -14,13 +19,71 @@
                   "id": "9",
                   "type": "user",
                   "name": "Sean",
-                  "image": "image_url"
+                  "email": "sean@example.com",
+                  "image": "image_url",
+                  "status": "accepted"
                 },
                 {
                   "id": "10",
                   "type": "user",
                   "name": "Robert",
+                  "email": "robert@example.com",
+                  "image": "image_url",
+                  "status": "pending"
+                },
+                {
+                  "id": "45",
+                  "type": "user",
+                  "name": "Sally",
+                  "email": "sally@example.com",
+                  "image": "image_url",
+                  "status": "requested"
+                }
+              ]
+          },
+          "games": {
+              "data": [
+                {
+                  "id": "22",
+                  "name": "Dungeons & Dragons",
+                  "game_type": "Epic",
+                  "description": "It's a wonderful world of dragons",
+                  "age_range": "12",
+                  "duration": "12200",
+                  "num_players": "42",
                   "image": "image_url"
+                },
+                {
+                  "id": "84",
+                  "name": "Pandemic",
+                  "game_type": "Board game",
+                  "description": "The world we are in right now.",
+                  "age_range": "12",
+                  "duration": "120",
+                  "num_players": "6",
+                  "image": "image_url"
+                }
+              ]
+          },
+          "game_nights": {
+              "data": [
+                {
+                  "id": "2",
+                  "name": "Dwarves Rule 2021",
+                  "date": "01-06-2021",
+                  "user_id": "200",
+                  "number_of_games": "10"
+                }
+              ]
+          },
+          "invitations": {
+              "data": [
+                {
+                  "id": "45",
+                  "name": "Pandemic Legacy Season 2: Episode 3",
+                  "date": "01-16-2021",
+                  "user_id": "200",
+                  "number_of_games": "3"
                 }
               ]
           }

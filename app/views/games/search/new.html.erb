@@ -1,0 +1,8 @@
+<%= form_tag "/games/search/results", method: :get, remote: true do %>
+  <%= label_tag 'Search by game title' %>
+  <%= text_field_tag :search %>
+
+  <%= submit_tag 'Search for Games' %>
+<% end %>
+
+<div class='results'></div>

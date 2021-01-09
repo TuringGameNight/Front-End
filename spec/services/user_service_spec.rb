@@ -47,8 +47,6 @@ RSpec.describe UserService do
 
       expect(results[:data][:relationships][:friends][:data][1][:image]).to be_a(String)
       expect(results[:data][:relationships][:friends][:data][1][:image]).to eq('image_url')
-
-
     end
   end
 end

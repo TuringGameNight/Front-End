@@ -8,9 +8,9 @@ RSpec.describe UserService do
         .to_return(status: 200, body: json_response)
 
       game_night_data = { name: 'D&D',
-               date: '01-06-2021',
-               number_of_games: "10",
-               friends: ["9", "10"] }
+                          date: '01-06-2021',
+                          number_of_games: '10',
+                          friends: %w[9 10] }
 
       results = GameNightService.create_game_night(game_night_data)
 

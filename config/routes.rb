@@ -5,7 +5,21 @@ Rails.application.routes.draw do
   get '/auth/google_oauth2', as: :google_login
   get '/auth/google_oauth2/callback', to: 'sessions#create'
 
+  resources :dashboard, only: [:index]
+
+
   get "/game-nights/new", to: "game_nights#new"
   post "/game-nights", to: "game_nights#create"
   get "/game-nights/:id", to: "game_nights#show"
+
+  resources :games, only: [:new, :create]
+  namespace :games do
+    get '/search', to: "search#new"
+    get '/search/results', to: "search#index"
+  end
+
+  namespace :users do
+    post '/games/:id', to: 'games#create'
+  end
+
 end

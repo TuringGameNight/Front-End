@@ -4,7 +4,7 @@
       "type": "game_night",
       "attributes": {
           "id": "2",
-          "name": "D&D",
+          "name": "Dungeons & Dragons",
           "date": "01-06-2021",
           "user_id": "200",
           "number_of_games": "10"
@@ -12,16 +12,24 @@
       "relationships": {
           "friends": {
               "data": {
-                  "id": "9",
-                  "type": "user",
-                  "name": "Sean",
-                  "image": "image_url"
+                "id": "9",
+                "type": "user",
+                "name": "Sean",
+                "email": "sean@example.com",
+                "image": "image_url",
+                "status": "accepted"
               }
           },
           "games": {
             "data": {
-              "id": "3",
-              "name": "Dungeons And Dragons"
+              "id": "22",
+              "name": "Dungeons & Dragons",
+              "game_type": "Epic",
+              "description": "It's a wonderful world of dragons",
+              "age_range": "12",
+              "duration": "12200",
+              "num_players": "42",
+              "image": "image_url"
             }
           }
       }
