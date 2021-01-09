@@ -44,5 +44,9 @@ describe 'As a user' do
 
       expect(page).to have_content('Please fill in all required fields.')
     end
+
+    it 'I cannot add a game that already exists in the database' do
+      # can we do this successfully? Should we do a "Do any of these games match?" feature?
+    end
   end
 end

@@ -32,7 +32,7 @@ describe 'As a user' do
         end
       end
 
-      it 'Sad path for bad request' do
+      it 'I cannot add a game that is already on my shelf of games' do
         visit '/dashboard'
 
         json_response2 = File.read('spec/fixtures/games_search_data.json')

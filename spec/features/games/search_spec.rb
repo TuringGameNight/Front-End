@@ -1,18 +1,11 @@
 require 'rails_helper'
 
 describe 'As a user' do
-  describe 'When I visit my dashboard' do
+  describe 'When I visit my dashboard and click to add a game to my account' do
     before :each do
       json_response1 = File.read('spec/fixtures/user_data.json')
       stub_request(:get, "#{ENV['BACKEND_URL']}/api/v1/users/200")
         .to_return(status: 200, body: json_response1)
-    end
-    it 'I see a button to add a game' do
-      visit '/dashboard'
-
-      within('#user-games') do
-        expect(page).to have_button('Add a Game')
-      end
     end
     it 'When I click on this button, I am taken to a form to search for the game' do
       visit '/dashboard'
@@ -44,5 +37,29 @@ describe 'As a user' do
       expect(page).to have_button('+')
       expect(page).to have_link("Don't see your game? Add it!")
     end
+
+    it 'When I search for jibberish(has no results), I get no results' do
+      # should have message to try another search or add a game call out
+      visit '/dashboard'
+
+      json_response2 = File.read('spec/fixtures/games_search_data.json')
+      stub_request(:get, "#{ENV['BACKEND_URL']}/api/v1/games/search?search=bmmf8")
+        .to_return(status: 404, body: json_response2)
+
+      within('#user-games') do
+        click_on 'Add a Game'
+      end
+
+      fill_in :search, with: 'bmmf8'
+      click_on 'Search for Games'
+      expect(current_path).to eq('/games/search/results')
+      expect(page).to have_content("We can't find anything! Try again or add it below.")
+      expect(page).to have_link("Don't see your game? Add it!")
+    end
+
+    xit 'When I search for a single letter or common word, I am restricted to X results' do
+      # how many results should we show and how do we paginate?
+    end
+
   end
 end
