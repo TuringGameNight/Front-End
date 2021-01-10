@@ -12,9 +12,7 @@
   </head>
 
   <body>
-   <header>
       <%= render 'layouts/navigation' %>
-    </header>
     <% flash.each do |name, msg| %>
       <div class= "<%=name%>-flash">
         <p><%= msg %></p>
@@ -23,5 +21,22 @@
     <main role="main">
     <%= content_for?(:content) ? yield(:content) : yield %>
     </main>
-  </body>
-</html>
+    <footer class="footer mt-auto py-3 bg-light">
+  <div class="container">
+    <span class="text-muted">Place sticky footer content here.</span>
+  </div>
+    </footer>
+    </body>
+    </html>
+
+
+
+
+
+
+
+
+
+
+
+

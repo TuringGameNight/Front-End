@@ -1,17 +1,15 @@
- <div class="container text-center">
+ <div class="container text-center h-100" >  
 <%= form_tag "/games/search/results", method: :get, remote: true do %>
   <div class="form-group form-group-sm">
-  <%= label_tag :Search_by_game_title, 'Search by Game Title:' %>
-  </div>
-  <div class="form-group form-group-lg">
-  <div class="row justify-content-center">
-  <div class="col-5">
+  <div class="row justify-content-center align-items-center h-100">
+  <div class="col-5 mx-auto">
+  <div class="jumbotron m-5">
+  <h3><%= label_tag :Search_by_game_title, 'Search by Game Title' %> </h3>
   <%= text_field_tag :search, '', :class => "form-control", :placeholder => "Game Title" %>
+  <%= submit_tag 'Search for Games', :class => "btn btn-info m-4"%>
   </div>
   </div>
   </div>
-  <%= submit_tag 'Search for Games'%>
 <% end %>
-
 <div class='results'></div>
 </div>
