@@ -8,6 +8,6 @@ class ApplicationController < ActionController::Base
       @current_user ||= User.new(session[:user])
     else
       redirect_to root_path
-    end 
+    end
   end
 end

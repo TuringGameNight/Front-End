@@ -26,7 +26,11 @@ gem 'faraday'
 gem 'figaro'
 gem 'travis'
 gem 'omniauth-google-oauth2'
+<<<<<<< HEAD
 gem 'bootstrap', '~> 4.0.0'
+=======
+gem 'activerecord-session_store'
+>>>>>>> 31aee01a3372dec058f3874b80ba33aaa6e0a27e
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password

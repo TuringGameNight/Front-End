@@ -24,7 +24,7 @@ describe 'As a user' do
       click_on 'Suggest Game'
 
       expect(page).to have_content('Game created successfully and added to your shelf!')
-      expect(current_path).to eq(dashboard_index_path)
+      expect(current_path).to eq(dashboard_path)
     end
 
     it 'I cannot add a new game if require data (desc) missing' do

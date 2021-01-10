@@ -1,10 +1,31 @@
 class User
   attr_reader :id, :name, :image, :friends, :games, :game_nights
 
-  def initialize(data)
-    @id = data[:data][:attributes][:id]
-    @name = data[:data][:attributes][:name]
-    @image = data[:data][:attributes][:image]
+  def initialize(user_info)
+    @id = user_info[:data][:attributes][:id]
+    @name = user_info[:data][:attributes][:name]
+    @image = user_info[:data][:attributes][:image]
+    @friends = user_info[:data][:attributes][:buds]
+    @games = user_info[:data][:attributes][:games]
+    @game_nights = user_info[:data][:attributes][:game_nights]
   end
 
+  # def add_friends(friends)
+  #   friends.each do |friend|
+  #     binding.pry
+  #     @friends << friend
+  #   end
+  # end
+  #
+  # def add_games(games)
+  #   games.each do |game|
+  #     @games << game
+  #   end
+  # end
+  #
+  # def add_game_nights(game_nights)
+  #   game_nights.each do |game_night|
+  #     @game_nights << game_night
+  #   end
+  # end
 end

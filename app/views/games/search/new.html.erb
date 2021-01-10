@@ -1,9 +1,10 @@
+ <div class="jumbotron m-5" style="background-image: url(https://pghequalitycenter.org/wp-content/uploads/2020/11/game-night.jpg); background-size: 100%; background-position: center top; height: 90vh;">
  <div class="container text-center h-100" >  
 <%= form_tag "/games/search/results", method: :get, remote: true do %>
   <div class="form-group form-group-sm">
   <div class="row justify-content-center align-items-center h-100">
   <div class="col mx-auto">
-  <div class="jumbotron m-5">
+  
   <h3><%= label_tag :Search_by_game_title, 'Search by Game Title' %> </h3>
   <%= text_field_tag :search, '', :class => "form-control", :placeholder => "Game Title" %>
   <%= submit_tag 'Search for Games', :class => "btn btn-info m-4"%>
