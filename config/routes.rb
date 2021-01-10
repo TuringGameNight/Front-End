@@ -5,8 +5,7 @@ Rails.application.routes.draw do
   get '/auth/google_oauth2', as: :google_login
   get '/auth/google_oauth2/callback', to: 'sessions#create'
 
-  resources :dashboard, only: [:index]
-
+  get :dashboard, to: 'dashboard#index'
 
   get "/game-nights/new", to: "game_nights#new"
   post "/game-nights", to: "game_nights#create"

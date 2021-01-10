@@ -19,7 +19,7 @@
 </div>
 <div id="friends">
   <h3>Add a Friend</h3>
-    <%= form_tag dashboard_index_path, method: :post do %>
+    <%= form_tag dashboard_path, method: :post do %>
       <%= label_tag :friend_email %>
       <%= text_field_tag :friend_email %>
       <%= submit_tag 'Add Friend' %>

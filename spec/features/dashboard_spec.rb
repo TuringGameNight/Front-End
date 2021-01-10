@@ -9,7 +9,7 @@ describe 'As an authenticated user' do
     end
 
     it 'I see a welcome message, a list of my game nights, a list of my games and a list of my friends' do
-      visit dashboard_index_path
+      visit dashboard_path
 
       within('#welcome-message') do
         expect(page).to have_content('Welcome Jake!')
