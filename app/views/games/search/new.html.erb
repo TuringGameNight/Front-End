@@ -1,15 +1,17 @@
  <div class="container text-center">
 <%= form_tag "/games/search/results", method: :get, remote: true do %>
-  <form class="form-horizontal">
   <div class="form-group form-group-sm">
   <%= label_tag :Search_by_game_title, 'Search by Game Title:' %>
   </div>
   <div class="form-group form-group-lg">
-  <%= text_field_tag :search, '', :class => "form-control input-sm" %>
+  <div class="row justify-content-center">
+  <div class="col-5">
+  <%= text_field_tag :search, '', :class => "form-control", :placeholder => "Game Title" %>
   </div>
-  </form>
+  </div>
+  </div>
   <%= submit_tag 'Search for Games'%>
 <% end %>
 
 <div class='results'></div>
-<div>
+</div>
