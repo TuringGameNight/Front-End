@@ -1,0 +1,264 @@
+{
+  "data": [
+      {
+          "id": null,
+          "type": "board_game",
+          "attributes": {
+              "name": "Azul",
+              "description": "<p><strong>Azul</strong> was designed by the world famous, award-winning game author Michael Riesling. Azul captures the beautiful aesthetics of Moorish art in a contemporary board game.</p>\r\n<p>Players compete as artisans decorating the walls of the royal Palace of Dvora. By carefully drafting the correct Quantity and style of tiles, the most clever of artisans plan ahead to maximize the beauty of their work (not to mention their scores!) while ensuring they wasted no supplies in the process.</p>\r\n<p>Introduced by the moors, &quot;azulejos&quot; (originally white and blue ceramic tiles) were fully embraced by the Portuguese, when their King Manuel I, on a visit to the Alhambra Palace in Southern Spain, was mesmerized by the stunning beauty of the Moorish decorative tiles. The King, awestruck by the interior beauty of the Alhambra, immediately ordered that his own Palace in Portugal be decorated with similar wall tiles.</p>\r\n<p>As a tile-laying artist, you have been challenged to embellish the walls of the royal Palace of Dvora.</p>",
+              "age_range": "8+",
+              "duration": 60,
+              "image": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1559254200327-61EFZADvURL.jpg",
+              "num_players": "2-4",
+              "game_type": "Abstract"
+          }
+      },
+      {
+          "id": null,
+          "type": "board_game",
+          "attributes": {
+              "name": "Arboretum",
+              "description": "<p><em>Nowhere is nature's beauty quite so evident as in the resplendent colors of an arboretum.</em></p>\r\n<p>In <strong>Arboretum</strong>, you create carefully planned paths for your visitors to walk as they take in the colorful explosion of buds and leaves. The cheerful cherry blossom, the fragrant dogwood, the mighty oak - all have a place in this peaceful haven. But the tranquil setting belies the game's competitive heart. You must choose which cards to plant in your arboretum and which to keep in hand, as only the most expert curator will win the renown of nature enthusiasts everywhere.</p>\r\n<p><strong>Arboretum</strong> is a strategic card game that challenges players to create the most beautiful path through the garden. Choosing the correct cards and placing them in the most efficient orientation will score you the most points at the end of the game. With elegantly simple rules, Arboretum offers players surprisingly complex choices.</p>\r\n<p><strong>Deluxe edition:</strong></p>\r\n<p>The deluxe edition offers fans a chance to enjoy the elegance of the game with an engraved and heat-treated wooden box, premium rainbow foil cards, an embroidered fabric bag, and a beautiful full color sleeve for the box.</p>",
+              "age_range": "8+",
+              "duration": 45,
+              "image": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1540941408515",
+              "num_players": "2-4",
+              "game_type": "Card Game"
+          }
+      },
+      {
+          "id": null,
+          "type": "board_game",
+          "attributes": {
+              "name": "Agricola (Revised Edition)",
+              "description": "<p>Updated and streamlined for a new generation of players, <em>Agricola</em>, the award-winning and highly acclaimed game by Uwe Rosenberg, features a revised rulebook and gameplay, along with wood pieces and components for up to four players.</p>\r\n<p>The 17th Century Was Not an Easy Time to be a Farmer. A game for 1-4 players ages 12 and up; play time is 30 minutes per player. Amazing replay value. The Agricola base game is a revised edition of Uwe Rosenberg’s celebrated classic. The game is designed for 1-4 players, features improved all-wood components and a card selection from the base game as well as its expansions, revised and updated for this edition. Players begin the game with two family members and can grow their families over the course of the game. This allows them more actions but remember you have to grow more food to feed your family as it grows! Feeding your family is a special kind of challenge and players will plant grain and vegetables while supplementing their food supply with sheep, wild boar and cattle. Guide your family to wealth, health and prosperity and you will win the game.</p>",
+              "age_range": "10+",
+              "duration": 120,
+              "image": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1559254915322-61vm3wX33lL.jpg",
+              "num_players": "1-4",
+              "game_type": "Economic, Farming"
+          }
+      },
+      {
+          "id": null,
+          "type": "board_game",
+          "attributes": {
+              "name": "Aeon's End",
+              "description": "<p>This isn't the end of the world. That already happened. This is what's left. Us, Gravehold, and The Nameless - creatures seeking to snatch what little we left from our group. The breath is in our lungs,. The weak light in our eyes<br /><br />For generations, we have taken refuge in an ancient and haunted place, one whose first purpose was forgotten for a thousand ages, until our exodus once again filled its empty halls and hovels iwth our shadows. Here in the darkness, we seek a way back to the light.<br /><br />It has taken the breach mages an aeon to hone their dark craft, but they are ready, they are lethal. The breaches, the very conduits through which The Nameless travel, have become our weapon. The breach mages wield this power iwth undeniable ambition: to survive,to take back The World That Was, to protect our home.<br /><br /><em>Aeon's End</em> is a cooperative deck building game where your deck is never shuffled, a variable player order simulates the chaos of battle, and deck management makes all your decisions meaningful. Eveyry game you will face a different nemesis, each with a unique set of abilities requiring a different strategy to defeat.</p>",
+              "age_range": "14+",
+              "duration": 75,
+              "image": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1541007215157",
+              "num_players": "1-4",
+              "game_type": "Card Game, Fantasy, Sci-Fi"
+          }
+      },
+      {
+          "id": null,
+          "type": "board_game",
+          "attributes": {
+              "name": "A Feast for Odin",
+              "description": "<p>Delve into the world of Vikings and dabble in trading, hunting, raiding, pillaging, plundering, and raiding some more. Build houses, explore new worlds, and every round, have a feast in Odin's name. <br /><br />The large variety of actions and occupations guarantees your Notherners long-lasting fun, with each game creating a new world on your player board!</p>",
+              "age_range": "12+",
+              "duration": 120,
+              "image": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1559254971843-51FVPlTTtoL.jpg",
+              "num_players": "1-4",
+              "game_type": "Economic, Medieval"
+          }
+      },
+      {
+          "id": null,
+          "type": "board_game",
+          "attributes": {
+              "name": "Arkham Horror: The Card Game",
+              "description": "<p>Something evil stirs in Arkham, and only you can stop it.</p>\r\n<p>Blurring the traditional lines between roleplaying and card game experiences, <strong>Arkham Horror: The Card Game</strong> is the living card game of love craft I an mystery, monsters, and madness!</p>\r\n<p>You and your friend (or up to three friends with two core sets) become characters within the quiet new England town of Arkham. You have your talents, sure, but you also have your flaws. Perhaps you've dabbled a little too much in the writings of the Necronomicon, and its words continue to haunt you. Perhaps you feel compelled to cover up any signs of otherworldly evils, hampering your own investigations in order to protect the quiet confidence of the greater population. Perhaps you'll be scarred by your encounters with a ghoulish cult. No matter what compels you, no matter what haunts you, you'll find both your strengths and weaknesses reflected in your custom deck of cards, and these cards will be your resources as you work with your friends to unravel the world's most terrifying mysteries.</p>\r\n<p>Meanwhile, each of your adventures in Arkham Horror: The Card Game carries you deeper into mystery. You'll find cultists and foul rituals. You'll find haunted houses and strange creatures. And you may find signs of the ancient ones straining against the barriers to our world… the basic mode of play in Arkham Horror: The Card Game is not the adventure, but the campaign. You might be scarred by your adventures, your sanity may be strained, and you may alter Arkham's landscape, burning buildings to the ground.</p>\r\n<p>All your choices and actions have consequences that reach far beyond the immediate resolution of the scenario at hand. And your actions may earn you valuable experience with which you can better prepare yourself for the adventures that still lie before you.</p>",
+              "age_range": "14+",
+              "duration": 120,
+              "image": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1559257204681-515mUPxEHZL.jpg",
+              "num_players": "1-2",
+              "game_type": "Adventure, Card Game, Cooperative, Fantasy, Horror, Solo / Solitaire"
+          }
+      },
+      {
+          "id": null,
+          "type": "board_game",
+          "attributes": {
+              "name": "Architects of the West Kingdom",
+              "description": "<p>Architects of the West Kingdom is set at the end of the Carolingian Empire, circa 850 AD. As royal architects, players compete to impress their King and maintain their noble status by constructing various landmarks throughout his newly appointed domain.</p>\r\n<p>Players will need to collect raw materials, hire apprentices and keep a watchful eye on their workforce. These are treacherous times. Rival architects will stop at nothing to slow your progress. Will you remain virtuous, or be found in the company of thieves and black marketeers?<br /><br />The aim of Architects of the West Kingdom is to be the player with the most Victory Points (VP) at the game's end. Points are gained by constructing various Buildings and advancing work on the Archbishop's Cathedral. Throughout the game, players will need to make a lot of moral decisions. However, only at the game's end will their virtue be judged. A few underhanded deals here and there might not seem like much, but fall too far and you will be punished. The game ends once a set number of constructions have been completed.</p>",
+              "age_range": "12+",
+              "duration": 80,
+              "image": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1540939581145",
+              "num_players": "1-5",
+              "game_type": "City Building, Medieval"
+          }
+      },
+      {
+          "id": null,
+          "type": "board_game",
+          "attributes": {
+              "name": "Agricola",
+              "description": "<p>In <strong>Agricola</strong> (Latin for &quot;farmer&quot;), you're a farmer in a wooden shack with your spouse and little else. On a turn, you get to take only two actions, one for you and one for the spouse, from all the possibilities you'll find on a farm: collecting clay, wood or stone; building fences; and so on. You might think about having kids in order to get more work accomplished, but first you need to expand your house. And what are you going to feed all the little rugrats?</p>\r\n<p>Agricola is a turn-based game. There are 14 game turns plus 6 harvest phases (after turn 4, 7, 9, 11, 13, and 14). Each player starts with two playing tokens (farmer and wife) and thus can take two actions per turn. There are multiple options, and while the game progresses, you'll have more and more: first thing in a turn, a new action card is flipped over. Problem: Each action can be taken just once per turn, so it's important to do some things with high preference. Each player also starts with a hand of 7 Occupation cards (of more than 160 total) and 7 Minor Improvement cards (of more than 140 total) that he may use during the game if they fit in his/her strategy. This amounts to countless strategies, some depending on your card hand. Sometimes it's a good choice to stay on course, sometimes you better react on what your opponents do.</p>",
+              "age_range": "12+",
+              "duration": 60,
+              "image": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1575999333848",
+              "num_players": "1-5",
+              "game_type": "Animals, Economic, Farming"
+          }
+      },
+      {
+          "id": null,
+          "type": "board_game",
+          "attributes": {
+              "name": "Age of Steam",
+              "description": "",
+              "age_range": "13+",
+              "duration": 180,
+              "image": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1559255048072-511gmgQq5aL.jpg",
+              "num_players": "2-6",
+              "game_type": "Economic, Trains, Transportation"
+          }
+      },
+      {
+          "id": null,
+          "type": "board_game",
+          "attributes": {
+              "name": "Anachrony",
+              "description": "<p>Command mighty Exosuits, traverse Time Rifts and lead your Path through a cataclysmic future in this epic board game for 1-4 players. Includes the base game, the Doomsday module and the Chronobot solo variant.</p>",
+              "age_range": "15+",
+              "duration": 120,
+              "image": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1559254939492-51iyPzyWlgL.jpg",
+              "num_players": "1-4",
+              "game_type": "Economic"
+          }
+      },
+      {
+          "id": null,
+          "type": "board_game",
+          "attributes": {
+              "name": "Antiquity",
+              "description": "&quot;These fields no longer yield grain the way they used to,&quot; complains the farmer. &quot;We should settle new lands before our food runs out. Why don't we start farming olives, like our neighbours?&quot;.<br />\r\n<br />\r\nThe cart-driver nods: &quot;Ever since them city folks started worshipping San Giorgio I have to travel further and further to new building sites. I'm on my way now to the new inn they built. I'll change horses there and deliver this load&quot; he gestures towards the pile of wood in the cart with his head &quot;to the sea beyond. Gonna start some fisheries there. It is said we'll conquer those olive-farmers before long. But their land is even more polluted than ours.&quot;<br />\r\n<br />\r\nThe farmer nods his head in reply. As the cart starts moving again, he returns to the field to harvest the last bushels of grain, growing between the stumps of what used to be a lush forest - three turns ago.<br />\r\n<br />\r\nAntiquity is a strategy game for 2-4 players. It is set in an environment loosely modeled on Italy in the late Middle Ages. Players choose their own victory condition: they can focus on population growth, trade, conquest, or city building by choosing their patron saint. Each strategy requires a completely different style of play. Or you can choose to adore Santa Maria, the most powerful saint of all - but you'll be expected to build a civilization twice as impressive as any other player. While your economy is constantly improving, with more and more advanced cities bringing new options each turn, the land around your cities is slowly being depleted, forcing you to travel further and further to gather your raw materials - until finally, there is no more land left to farm. Let's hope one of you has won the game before that time!",
+              "age_range": "14+",
+              "duration": 180,
+              "image": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1559255817787-51aaSt0t07L.jpg",
+              "num_players": "2-4",
+              "game_type": "City Building, Civilization, Economic"
+          }
+      },
+      {
+          "id": null,
+          "type": "board_game",
+          "attributes": {
+              "name": "Alchemists",
+              "description": "<p>A little mandrake root, a little raven's feather. Toss them in the cauldron and see what they make. Should you drink it? Maybe not. After all, that's what students are for.<br /><br />Welcome to the world of Alchemists! Perform experiments to discover the magical properties of your ingredients. Demonstrate your knowledge by selling potions. Use the money to buy artifacts that further your research. Publish, publish, publish! Earn grants. And expose the fallacies published by those fools who think they can be your rivals.<br /><br />Alchemists is a game of strategy, risk assessment, and deduction. Do you experiment to get more knowledge or do you publish now to get more points? Pay to endorse the latest theory of toads or save your money for an artifact? And should you really be selling that potion to the large axe-wielding barbarian when you aren't quite sure of its effects? The choices you make will prove whether you are the world's greatest alchemist.<br /><br />This game is designed to be played using an app that turns your tablet or smartphone into an ingredient card reader. The app is available for free. Supported operating systems are: iOS, Android, Windows. If, for whatever reason, you don't want to use the mobile app, you can still use the web-based version or play with one player acting as the game master.</p>",
+              "age_range": "13+",
+              "duration": 180,
+              "image": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1559255077524-61a8J4UVuZL.jpg",
+              "num_players": "2-4",
+              "game_type": "Deduction, Fantasy"
+          }
+      },
+      {
+          "id": null,
+          "type": "board_game",
+          "attributes": {
+              "name": "Arkham Horror",
+              "description": "<p>The town of Arkham, Massachusetts is in a panic. Horrific and bizarre events have begun to occur with increasing frequency -- all seeming to point towards some cataclysmic event in the near future that may spell disaster for everyone. Only one small band of investigators can save Arkham from the Great Old Ones and destruction!<br /><br />Arkham Horror was originally published by Chaosium, Inc. almost two decades ago. This new, updated edition features stunning new artwork and graphical design as well as revised and expanded rules! No fan of the Cthulhu Mythos will want to miss this opportunity to acquire this classic Call of Cthulhu boardgame!</p>",
+              "age_range": "12+",
+              "duration": 180,
+              "image": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1559254926767-61X8MN6SuwL.jpg",
+              "num_players": "1-8",
+              "game_type": "Adventure, Card Game, Fantasy, Horror"
+          }
+      },
+      {
+          "id": null,
+          "type": "board_game",
+          "attributes": {
+              "name": "Ascension: Deckbuilding Game",
+              "description": "Ascension is a fast paced deckbuilding game designed by Magic Pro Tour champions Justin Gary, Rob Dougherty, and Brian Kibler, with artwork by Eric Sabee. Ascension is a deck-building game where players spend Runes to acquire more powerful cards for their deck. It offers a dynamic play experience where players have to react and adjust their strategy accordingly.<br />\r\n<br />\r\n<b>This is a base game. No expansions are included.</b>",
+              "age_range": "13+",
+              "duration": 45,
+              "image": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1559254911428-51XvWJEJg7L.jpg",
+              "num_players": "1-4",
+              "game_type": "Card Game, Fantasy"
+          }
+      },
+      {
+          "id": null,
+          "type": "board_game",
+          "attributes": {
+              "name": "Android: Netrunner",
+              "description": "<p><em>Android: Netrunner</em> is a two-player Living Card Game® set in a dystopian, cyberpunk future where monolithic megacorps own and control the vast majority of human interests.</p>\r\n<p>While corporation players try to score points by advancing their agendas, they have to guard their intellectual properties from the elite and subversive hackers known as netrunners. Netrunners attempt to win the game by stealing the corp's agendas, by any means possible!</p>",
+              "age_range": "14+",
+              "duration": 60,
+              "image": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1559257170700-519CVRT008L.jpg",
+              "num_players": "2",
+              "game_type": "Bluffing, Cyberpunk, Sci-Fi"
+          }
+      },
+      {
+          "id": null,
+          "type": "board_game",
+          "attributes": {
+              "name": "Air, Land, & Sea",
+              "description": "<p>In <strong>Air, Land, &amp; Sea</strong>, two players battle for control over each “theater” of war by playing Battle cards and strategically utilizing their special abilities to gain the advantage. Whoever controls the most theaters, claims victory points, and the player who scores 12 victory points first wins the war!</p>\r\n<p>However, you do not have to continue a Battle to the very end. Sometimes, it may be best to withdraw in order to deny your opponent complete victory! In Air, Land, &amp; Sea, a strategic withdraw may lose you the battle to ultimately win the war!</p>",
+              "age_range": "14+",
+              "duration": 30,
+              "image": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1560900385698",
+              "num_players": "2",
+              "game_type": "Card Game, Print & Play, Wargame, World War II"
+          }
+      },
+      {
+          "id": null,
+          "type": "board_game",
+          "attributes": {
+              "name": "A Fake Artist Goes to New York",
+              "description": "<p><em>A Fake Artist Goes to New York</em> is a game for five to ten players in which you have to draw and conclude. Trying to conclude something while drawing is not as easy as you think!<br /><br />Everyone will try to draw what the game master wrote on the prompt cards, but each player is only allowed to draw one line. For example, if the topic is &quot;cat&quot;, you could draw an ear or a whisker so that the other players know you know the topic. There is one fake artist among the players - someone who doesn't know the topic and will have to draw a line randomly.<br /><br />After each player has drawn twice, they will have to decide who the fake artist is. If the fake artist receives the most votes, that player loses. Otherwise, the fake artist and the game master win the game. Now, you might think it is extremely easy to find out who the fake artist is, but there is one more rule: Even if the fake artist receives the most votes, that player can still guess the topic of the picture everyone drew - and win with a correct guess!<br /><br />Knowing this rule, it becomes much more difficult for the real artists to draw their lines. You want to show the other artists that you know the topic of the picture, but you don't want to be too obvious in front of the fake artist - so the picture becomes a crazy mess!<br /><br /><strong>Contents:</strong><br />9 Title Cards<br />10 Color Pens<br />White Board Marker<br />Drawing Paper<br />Manual</p>\r\n<p> </p>",
+              "age_range": "8+",
+              "duration": 20,
+              "image": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1541180940487",
+              "num_players": "5-10",
+              "game_type": "Art, Bluffing, Deduction, Family Game, Party Game"
+          }
+      },
+      {
+          "id": null,
+          "type": "board_game",
+          "attributes": {
+              "name": "Acquire",
+              "description": "<p>Saxon City is buzzing with promising startups, and savvy investors predict it will soon emerge as THE next super city. Compete with other venture capitalists to build the city and own majority shares in the most lucrative corporations.</p>\r\n<p>In Acquire, each player strategically invests in businesses, trying to retain a majority of stock. As the businesses grow with tile placements, they also start merging, giving the majority stockholders of the acquired business sizable bonuses, which can then be used to reinvest into other chains. All of the investors in the acquired company can then cash in their stocks for current value or trade them 2-for-1 for shares of the newer, larger business. The game is a race to acquire the greatest wealth.</p>",
+              "age_range": "12+",
+              "duration": 120,
+              "image": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1559253942244-61r7PicCt7L.jpg",
+              "num_players": "3-6",
+              "game_type": "Economic"
+          }
+      },
+      {
+          "id": null,
+          "type": "board_game",
+          "attributes": {
+              "name": "Archipelago",
+              "description": "<b>Archipelago</b> combines exploration, resource management, optimization, cooperation, strategy, negotiation, corruption, commerce, suspicion, alliances and betrayals, even a hint of investigation.<br />\r\n<br />\r\nEach player takes on the role of an explorer and their team, mandated by a European nation to discover, colonize and profit from the archipelagos. These missions are supposed to happen diplomatically, by answering the needs of the local population as much as the regular demands from the continent.<br />\r\n<br /><br />",
+              "age_range": "14+",
+              "duration": 240,
+              "image": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1559255029509-514siIY2mIL.jpg",
+              "num_players": "2-5",
+              "game_type": "Civilization, Expansion, Exploration, Resource Management, Semi-Cooperative"
+          }
+      },
+      {
+          "id": null,
+          "type": "board_game",
+          "attributes": {
+              "name": "Arcadia Quest",
+              "description": "<p><strong>Arcadia Quest</strong> is an exciting, adventure board game for 2-4 players created by a quartet of designers, including Eric M. Lang.</p>\r\n<p>Each player controls a Guild, competing to be the liberators of the city of Arcadia and, more importantly, to become the richest and most powerful Guild in the land! Arcadia Quest combines PvE and PvP gameplay, so players battle both the Monsters that populate the board and the Heroes of other Guilds.</p>\r\n<p>The Monsters react to the player's actions, so there is no Game Master, everybody gets to play as Heroes. The game is played through scenarios that make up a campaign. Players can choose the path their campaign takes, ensuring that no two playthroughs are ever the same.</p>\r\n<p>As their Heroes defeat enemies and accomplish quests, they become gradually more powerful and resourceful!</p>",
+              "age_range": "14+",
+              "duration": 60,
+              "image": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1540656630504",
+              "num_players": "2-4",
+              "game_type": "Adventure, Fantasy, Fighting"
+          }
+      }
+  ]
+}
