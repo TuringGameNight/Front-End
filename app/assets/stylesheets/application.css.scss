@@ -13,11 +13,22 @@
  *= require_tree .
  *= require_self
  */
-@import "bootstrap"; 
+@import "bootstrap";
 @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Open+Sans:wght@300;400&display=swap');
-h3 {color: #17a2b8; font-family: 'Bangers', cursive;}
-nav {background-color: #e7e7e7 }
-.navbar-brand {font-family: 'Bangers', cursive;}
+
+h3 {
+  color: #17a2b8;
+  font-family: 'Bangers', cursive;
+}
+
+nav {
+  background-color: #e7e7e7
+}
+
+.navbar-brand {
+  font-family: 'Bangers', cursive;
+}
+
 .footer {
   position: absolute;
   bottom: 0;
@@ -25,3 +36,11 @@ nav {background-color: #e7e7e7 }
   height: 2.5rem;            /* Footer height */
 }
 
+#welcome-message {
+  font-family: 'Bangers', cursive;
+}
+
+.scroll {
+    max-height: 60vh;
+    overflow-y: auto;
+}
