@@ -1,4 +1,6 @@
 class Users::GamesController < ApplicationController
+  before_action :is_user
+
   def create
     response = UserFacade.add_game(params[:id])
     if response.status == 200
