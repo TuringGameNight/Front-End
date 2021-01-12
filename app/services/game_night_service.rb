@@ -5,7 +5,7 @@ class GameNightService
              number_of_games: data[:number_of_games],
              friends: data[:friends].shift }
 
-    conn = Faraday.new("#{ENV['BACKEND_URL']}/api/v1/game-nights")
+    conn = Faraday.new("#{ENV['BACKEND_URL']}/api/v1/game_nights")
 
     response = conn.post do |request|
       request.body = JSON.generate(body)
