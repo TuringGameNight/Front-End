@@ -11,7 +11,7 @@ class UserService
     conn = Faraday.new("#{ENV['BACKEND_URL']}/api/v1/users/games")
 
     response = conn.post do |request|
-      request.body = body
+      request.body = JSON.generate(body)
     end
   end
 end
