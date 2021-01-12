@@ -8,7 +8,7 @@ class GameNightService
     conn = Faraday.new("#{ENV['BACKEND_URL']}/api/v1/game-nights")
 
     response = conn.post do |request|
-      request.body = body
+      request.body = JSON.generate(body)
     end
 
     JSON.parse(response.body, symbolize_names: true)
