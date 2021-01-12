@@ -6,6 +6,21 @@ describe 'As a user' do
       json_response1 = File.read('spec/fixtures/user_data.json')
       stub_request(:get, "#{ENV['BACKEND_URL']}/api/v1/users/200")
         .to_return(status: 200, body: json_response1)
+        json = JSON.parse(json_response1, symbolize_names: true)
+        user = User.new(json)
+        friends = json[:data][:relationships][:friends][:data].map do |data|
+          Friend.new(data)
+        end
+        games = json[:data][:relationships][:games][:data].map do |data|
+          Game.new(data)
+        end
+        game_nights = json[:data][:relationships][:game_nights][:data].map do |data|
+          GameParty.new(data)
+        end
+        user.add_friends(friends)
+        user.add_games(games)
+        user.add_game_nights(game_nights)
+        allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
     end
     it 'I can add a new game to the app' do
       body = File.read('spec/fixtures/add_game_data.json')

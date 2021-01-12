@@ -3,9 +3,24 @@ require 'rails_helper'
 describe 'As a user' do
   describe 'When I visit /game-nights/new' do
     before :each do
-      json_response = File.read('spec/fixtures/user_data.json')
-      stub_request(:get, "#{ENV['BACKEND_URL']}/api/v1/users/200")
-        .to_return(status: 200, body: json_response)
+      json_response1 = File.read('spec/fixtures/user_data.json')
+      stub_request(:get, "#{ENV['BACKEND_URL']}/api/v1/users/")
+        .to_return(status: 200, body: json_response1)
+        json = JSON.parse(json_response1, symbolize_names: true)
+        user = User.new(json)
+        friends = json[:data][:relationships][:friends][:data].map do |data|
+          Friend.new(data)
+        end
+        games = json[:data][:relationships][:games][:data].map do |data|
+          Game.new(data)
+        end
+        game_nights = json[:data][:relationships][:game_nights][:data].map do |data|
+          GameParty.new(data)
+        end
+        user.add_friends(friends)
+        user.add_games(games)
+        user.add_game_nights(game_nights)
+        allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
     end
 
     it 'I see a form to create a new game_night' do
@@ -38,7 +53,7 @@ describe 'As a user' do
       expect(current_path).to eq('/game-nights/2')
     end
 
-    xit 'If I do not add the correct data (no friends), no game night' do
+    it 'If I do not add the correct data (no friends), no game night' do
       # skipping this one for now, we need to deal with a 403 in the facade
       visit '/game-nights/new'
 
@@ -52,7 +67,7 @@ describe 'As a user' do
 
       click_on "Let's Play!"
 
-      expect(page).to have_content('Please fill out all required fields')
+      expect(page).to have_content('Please fill out all required fields.')
     end
   end
 end

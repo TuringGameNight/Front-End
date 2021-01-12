@@ -6,6 +6,21 @@ describe 'As a user' do
       json_response1 = File.read('spec/fixtures/user_data.json')
       stub_request(:get, "#{ENV['BACKEND_URL']}/api/v1/users/200")
         .to_return(status: 200, body: json_response1)
+      json = JSON.parse(json_response1, symbolize_names: true)
+      user = User.new(json)
+      friends = json[:data][:relationships][:friends][:data].map do |data|
+        Friend.new(data)
+      end
+      games = json[:data][:relationships][:games][:data].map do |data|
+        Game.new(data)
+      end
+      game_nights = json[:data][:relationships][:game_nights][:data].map do |data|
+        GameParty.new(data)
+      end
+      user.add_friends(friends)
+      user.add_games(games)
+      user.add_game_nights(game_nights)
+      allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
     end
     it 'When I click on this button, I am taken to a form to search for the game' do
       visit '/dashboard'
@@ -22,7 +37,7 @@ describe 'As a user' do
       visit '/dashboard'
 
       json_response2 = File.read('spec/fixtures/games_search_data.json')
-      stub_request(:get, "#{ENV['BACKEND_URL']}/api/v1/games/search?search=Catan")
+      stub_request(:get, "#{ENV['BACKEND_URL']}/api/v1/games/find?search=Catan")
         .to_return(status: 200, body: json_response2)
 
       within('#user-games') do
@@ -43,7 +58,7 @@ describe 'As a user' do
       visit '/dashboard'
 
       json_empty = File.read('spec/fixtures/empty_results.json')
-      stub_request(:get, "#{ENV['BACKEND_URL']}/api/v1/games/search?search=bmmf8")
+      stub_request(:get, "#{ENV['BACKEND_URL']}/api/v1/games/find?search=bmmf8")
         .to_return(status: 200, body: json_empty)
 
       within('#user-games') do
@@ -57,8 +72,22 @@ describe 'As a user' do
       expect(page).to have_link("Don't see your game? Add it!")
     end
 
-    xit 'When I search for a single letter or common word, I am restricted to X results' do
+    it 'When I search for a single letter or common word, I am restricted to X results' do
       # how many results should we show and how do we paginate?
+      visit '/dashboard'
+
+      json_empty = File.read('spec/fixtures/search_data.json')
+      stub_request(:get, "#{ENV['BACKEND_URL']}/api/v1/games/find?search=a")
+        .to_return(status: 200, body: json_empty)
+
+      within('#user-games') do
+        click_on 'Add a Game'
+      end
+
+      fill_in :search, with: 'a'
+      click_on 'Search for Games'
+
+      expect(page).to have_css('.title', count: 20)
     end
   end
 end
