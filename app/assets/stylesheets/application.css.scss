@@ -44,3 +44,16 @@ nav {
     max-height: 60vh;
     overflow-y: auto;
 }
+
+.pop-out:hover{
+  transform:scale(1.1); 
+  color:#fff;
+}
+
+.shadow{
+  -webkit-box-shadow: 7px 7px 2px 0px rgba(50, 50, 50, 0.75);
+  -moz-box-shadow: 7px 7px 2px 0px rgba(50, 50, 50, 0.75);
+  box-shadow: 7px 7px 2px 0px rgba(50, 50, 50, 0.75);
+}
+
+

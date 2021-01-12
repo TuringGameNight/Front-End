@@ -1,15 +1,26 @@
 
-<div class="row justify-content-center mt-5" id="welcome-message">
-  <h1>Welcome <%= @user.name %>!</h1>
+<body style="background-color: #e8cbc0; background: -webkit-linear-gradient(to right, #e8cbc0, #636fa4); background: linear-gradient(to right, #e8cbc0, #636fa4);">
+
+
+<div class="container py-5">
+    <div class="row text-center text-black">
+        <div class="col-lg-8 mx-auto">
+            <h1 class="display-4" id="welcome-message">Welcome <%= @user.name %>  </h1>
+            <p class="lead mb-0" id="welcome-message">Navigate your Games, Schedule GameNights and add Friends</p>
+            <p class="lead" id="welcome-message">All from your dashboard
+                
+            </p>
+        </div>
+    </div>
 </div>
 
 
-<div class="container">
-  <div class="row">
-    <div class="col-md card m-3 align-items-center scroll" id="user-games">
-      <h3 class="card-title">Games</h3>
-      <%= button_to 'Add a Game', '/games/search', method: :get, class: "btn btn-primary" %>
 
+<div class="container py-5">
+  <div class="row">
+    <div class="shadow p-3 pop-out col-md card m-3 align-items-center scroll" id="user-games" style="height: 300px;">
+      <h3 class="card-title">Games</h3>
+      <%= button_to 'Add a Game', '/games/search', method: :get, class: "btn btn-primary bouton-image monBouton"%>
       <div class="container">
         <ul class="row mt-3">
           <% @user.games.each do |game| %>
@@ -20,7 +31,7 @@
 
     </div>
 
-    <div class="col-md card m-3 align-items-center scroll" id="game-nights">
+    <div class="shadow p-3 pop-out col-md card m-3 align-items-center scroll" id="game-nights">
       <h3 class="card-title">Game Nights</h3>
       <%= button_to 'Add a Game Night', game_nights_new_path, class: "btn btn-primary"%>
       <div class="container">
@@ -32,7 +43,7 @@
       </div>
     </div>
 
-    <div class="col-md card m-3 align-items-center scroll" id="friends">
+    <div class="shadow p-3 pop-out col-md card m-3 align-items-center scroll shadow-4" id="friends">
       <h3 class="card-title">Friends</h3>
         <%= form_tag dashboard_path, method: :post do %>
           <%= text_field_tag :friend_email, "", placeholder: "Friend's Email", class: "m-2", style: "text-align: center;"%>
@@ -50,3 +61,4 @@
     </div>
   </div>
 </div>
+</body>
