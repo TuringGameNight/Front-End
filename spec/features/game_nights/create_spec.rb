@@ -37,7 +37,7 @@ describe 'As a user' do
       visit '/game-nights/new'
 
       json_response = File.read('spec/fixtures/game_night_data.json')
-      stub_request(:post, "#{ENV['BACKEND_URL']}/api/v1/game-nights")
+      stub_request(:post, "#{ENV['BACKEND_URL']}/api/v1/game_nights")
         .to_return(status: 200, body: json_response)
 
       json_response2 = File.read('spec/fixtures/game_night_show.json')
@@ -58,7 +58,7 @@ describe 'As a user' do
       visit '/game-nights/new'
 
       json_response = File.read('spec/fixtures/empty_results.json')
-      stub_request(:post, "#{ENV['BACKEND_URL']}/api/v1/game-nights")
+      stub_request(:post, "#{ENV['BACKEND_URL']}/api/v1/game_nights")
         .to_return(status: 403, body: json_response)
 
       fill_in :name, with: 'Dungeons & Dragons'

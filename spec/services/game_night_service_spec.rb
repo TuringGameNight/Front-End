@@ -4,7 +4,7 @@ RSpec.describe UserService do
   context '#create_game_night' do
     it 'returns appropriate data' do
       json_response = File.read('spec/fixtures/game_night_data.json')
-      stub_request(:post, "#{ENV['BACKEND_URL']}/api/v1/game-nights")
+      stub_request(:post, "#{ENV['BACKEND_URL']}/api/v1/game_nights")
         .to_return(status: 200, body: json_response)
 
       game_night_data = { name: 'D&D',
