@@ -1,6 +1,6 @@
 class GamesController < ApplicationController
   before_action :is_user
-  
+
   def new
     @user = current_user
   end

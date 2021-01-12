@@ -15,13 +15,13 @@ class User
       @friends << friend
     end
   end
-  
+
   def add_games(games)
     games.each do |game|
       @games << game
     end
   end
-  
+
   def add_game_nights(game_nights)
     game_nights.each do |game_night|
       @game_nights << game_night
