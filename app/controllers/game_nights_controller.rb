@@ -1,6 +1,8 @@
 class GameNightsController < ApplicationController
+  before_action :is_user
+
   def new
-    @user = UserFacade.user_info('200')
+    @user = current_user
   end
 
   def create
@@ -9,13 +11,14 @@ class GameNightsController < ApplicationController
       flash[:success] = 'Game night created successfully!'
       redirect_to "/game-nights/#{game_night.id}"
     else
-      flash.now[:error] = 'Please fill in all required fields.'
+      flash.now[:error] = 'Please fill out all required fields.'
+      @user = current_user
       render :new
     end
   end
 
   def show
-    @user = UserFacade.user_info('200')
+    @user = current_user
     @game_night = GameNightFacade.find_game_night(params[:id])
   end
 end
