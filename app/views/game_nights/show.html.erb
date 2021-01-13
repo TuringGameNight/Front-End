@@ -1,12 +1,24 @@
-<h1><%= @game_night.name %></h1>
-<h3><%= @game_night.date %></h3>
-<h3><%= @game_night.number_of_games %></h3>
-<h3><%= @user.name %></h3>
+<body style="background-color: #e8cbc0; background: -webkit-linear-gradient(to right, #e8cbc0, #636fa4); background: linear-gradient(to right, #e8cbc0, #636fa4);">
 
-<% @friends.each do |friend| %>
-  <%= friend.name %>
-<% end %><br>
+<div class="row justify-content-center mt-5">
+  <div class="card p-5 shadow">
+    <h3 class="card-title"><%= @game_night.name %></h3>
+    <h4>Date: <%= @game_night.date %></h4>
+    <h4>Number of Games: <%= @game_night.number_of_games %></h4>
+    <h4>Host: <%= @user.name %></h4>
 
-<% @games.each do |game| %>
-  <%= link_to "#{game.name}", "/game/#{game.id}" %>
-<% end %>
+    <h4>Friends:</h4>
+    <ul>
+      <% @friends.each do |friend| %>
+      <li><%= friend.name %></li>
+      <% end %>
+    </ul>
+
+    <h4>Games:</h4>
+    <ul>
+      <% @games.each do |game| %>
+        <li><%= link_to "#{game.name}", "/game/#{game.id}" %></li>
+      <% end %>
+    </ul>
+  </div>
+</div>
