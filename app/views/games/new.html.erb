@@ -1,22 +1,27 @@
-<%= form_with url: games_path, local: true do |f| %>
+<body style="background-color: #e8cbc0; background: -webkit-linear-gradient(to right, #e8cbc0, #636fa4); background: linear-gradient(to right, #e8cbc0, #636fa4);">
 
-  <%= f.label :name %>
-  <%= f.text_field :name %><br><br>
+<div class="row justify-content-center mt-5">
+  <%= form_with url: games_path, local: true, class: "card p-5 shadow" do |f| %>
+    <h3 style="text-align: center;" class="mb-3">Add New  Game</h3>
 
-  <%= f.label :game_type %>
-  <%= f.text_field :game_type %><br><br>
+    <%= f.label :name, style: "text-align: center;" %>
+    <%= f.text_field :name %><br><br>
 
-  <%= f.label :description %>
-  <%= f.text_field :description %><br><br>
+    <%= f.label :game_type, style: "text-align: center;" %>
+    <%= f.text_field :game_type %><br><br>
 
-  <%= f.label :age_range %>
-  <%= f.number_field :age_range %><br><br>
+    <%= f.label :description, style: "text-align: center;" %>
+    <%= f.text_field :description %><br><br>
 
-  <%= f.label :duration %>
-  <%= f.number_field :duration %><br><br>
+    <%= f.label :age_range, style: "text-align: center;" %>
+    <%= f.number_field :age_range %><br><br>
 
-  <%= f.label :image %>(Opt.)
-  <%= f.text_field :image %><br><br>
+    <%= f.label :duration, style: "text-align: center;" %>
+    <%= f.number_field :duration %><br><br>
 
-  <%= f.submit "Suggest Game" %>
-<% end %>
+    <%= f.label :image, style: "text-align: center;" %>
+    <%= f.text_field :image, placeholder: "Optional URL", style: "text-align: center;"%><br><br>
+
+    <%= f.submit "Suggest Game", class: "btn btn-primary shadow" %>
+  <% end %>
+</div>

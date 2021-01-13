@@ -5,8 +5,8 @@ describe 'As a user' do
     it 'has the name of the application, the description and a link to sign in with google' do
       visit root_path
 
-      within '#title' do
-        expect(page).to have_content('Game Night')
+      within '#app-name' do
+        expect(page).to have_content('GameNight')
       end
 
       within '#description' do
@@ -14,7 +14,7 @@ describe 'As a user' do
       end
 
       within '#auth-button' do
-        expect(page).to have_button('Login with Google')
+        expect(page).to have_content('Login with Google')
       end
     end
   end

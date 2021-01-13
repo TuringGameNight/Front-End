@@ -1,20 +1,27 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>GameNight</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag    'application', media: 'all' %>
-    <%= javascript_include_tag 'application' %>
-  </head>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= content_for?(:title) ? yield(:title) : "GameNight" %></title>
+  <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "GameNight" %>">
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
 
-  <body>
-    <% flash.each do |name, msg| %>
-      <div class= "<%=name%>-flash">
-        <p><%= msg %></p>
-      </div>
-    <% end %>
-    <%= yield %>
-  </body>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
+</head>
+
+<body>
+  <%= render 'layouts/navigation' %>
+  <% flash.each do |name, msg| %>
+  <div class="<%=name%>-flash">
+    <p><%= msg %></p>
+  </div>
+  <% end %>
+  <main role="main">
+    <%= content_for?(:content) ? yield(:content) : yield %>
+  </main>
+</body>
+
 </html>

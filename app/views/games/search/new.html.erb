@@ -1,8 +1,17 @@
+ <body style="background-color: #e8cbc0; background: -webkit-linear-gradient(to right, #e8cbc0, #636fa4); background: linear-gradient(to right, #e8cbc0, #636fa4);">
+ <div class="jumbotron m-5">
+ <div class="container text-center h-100" >  
 <%= form_tag "/games/search/results", method: :get, remote: true do %>
-  <%= label_tag 'Search by game title' %>
-  <%= text_field_tag :search %>
-
-  <%= submit_tag 'Search for Games' %>
+  <div class="form-group form-group-sm">
+  <div class="row justify-content-center align-items-center h-100">
+  <div class="col mx-auto">
+  
+  <h3><%= label_tag :Search_by_game_title, 'Search by Game Title' %> </h3>
+  <%= text_field_tag :search, '', :class => "form-control", :placeholder => "Game Title" %>
+  <%= submit_tag 'Search for Games', :class => "btn btn-info m-4"%>
+  </div>
+  </div>
+  </div>
 <% end %>
-
 <div class='results'></div>
+</div>

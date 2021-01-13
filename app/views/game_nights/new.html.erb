@@ -1,14 +1,20 @@
-<%= form_with url: '/game-nights', local: true do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name, value: params[:title] %><br><br>
+<body style="background-color: #e8cbc0; background: -webkit-linear-gradient(to right, #e8cbc0, #636fa4); background: linear-gradient(to right, #e8cbc0, #636fa4);">
 
-  <%= f.label :date %>
-  <%= f.date_field :date, min: Date.today, max: Date.today.next_year(4) %><br><br>
+<div class="row justify-content-center mt-5">
+  <%= form_with url: '/game-nights', local: true, class: "card p-5 shadow" do |f| %>
+  <h3 style="text-align: center;" class="mb-3">New Game Night</h3>
 
-  <%= f.label :number_of_games %>
-  <%= f.number_field :number_of_games, value: params[:number_of_games] %><br><br>
+  <%= f.label :name, style: "text-align: center;" %>
+  <%= f.text_field :name, value: params[:title]%><br>
+
+  <%= f.label :date, style: "text-align: center;" %>
+  <%= f.date_field :date, min: Date.today, max: Date.today.next_year(4) %><br>
+
+  <%= f.label :number_of_games, style: "text-align: center;" %>
+  <%= f.number_field :number_of_games, value: params[:number_of_games]%><br>
 
   <%= f.collection_check_boxes :friends, @friends, :id, :name %>
 
-  <%= f.submit "Let's Play!" %>
-<% end %>
+  <%= f.submit "Let's Play!", class: "btn btn-primary shadow"%>
+  <% end %>
+</div>
