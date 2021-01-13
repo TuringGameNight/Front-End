@@ -1,5 +1,4 @@
 <%= form_with url: '/game-nights', local: true do |f| %>
-
   <%= f.label :name %>
   <%= f.text_field :name, value: params[:title] %><br><br>
 
@@ -9,7 +8,7 @@
   <%= f.label :number_of_games %>
   <%= f.number_field :number_of_games, value: params[:number_of_games] %><br><br>
 
-  <%= f.collection_check_boxes :friends, @user.friends, :id, :name %>
+  <%= f.collection_check_boxes :friends, @friends, :id, :name %>
 
   <%= f.submit "Let's Play!" %>
 <% end %>
