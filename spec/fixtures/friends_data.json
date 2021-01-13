@@ -1,0 +1,20 @@
+{
+  "data": [
+    {
+      "id": "9",
+      "type": "user",
+      "name": "Sean",
+      "email": "sean@example.com",
+      "image": "image_url",
+      "status": "accepted"
+    },
+    {
+      "id": "10",
+      "type": "user",
+      "name": "Robert",
+      "email": "robert@example.com",
+      "image": "image_url",
+      "status": "pending"
+    }
+  ]
+}

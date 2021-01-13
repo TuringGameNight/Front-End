@@ -1,4 +1,6 @@
 class Games::SearchController < ApplicationController
+  before_action :is_user
+
   def new; end
 
   def index

@@ -13,7 +13,7 @@
   <%= f.label :number_of_games, style: "text-align: center;" %>
   <%= f.number_field :number_of_games, value: params[:number_of_games]%><br>
 
-  <%= f.collection_check_boxes :friends, @user.friends, :id, :name %>
+  <%= f.collection_check_boxes :friends, @friends, :id, :name %>
 
   <%= f.submit "Let's Play!", class: "btn btn-primary shadow"%>
   <% end %>

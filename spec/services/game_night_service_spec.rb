@@ -4,15 +4,22 @@ RSpec.describe UserService do
   context '#create_game_night' do
     it 'returns appropriate data' do
       json_response = File.read('spec/fixtures/game_night_data.json')
-      stub_request(:post, "#{ENV['BACKEND_URL']}/api/v1/game-nights")
+      stub_request(:post, "#{ENV['BACKEND_URL']}/api/v1/game_nights")
         .to_return(status: 200, body: json_response)
+
+        json_response1 = File.read('spec/fixtures/user_data.json')
+      stub_request(:get, "#{ENV['BACKEND_URL']}/api/v1/users/200")
+        .to_return(status: 200, body: json_response1)
+      json = JSON.parse(json_response1, symbolize_names: true)
+      user = User.new(json)
+      allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
 
       game_night_data = { name: 'D&D',
                           date: '01-06-2021',
                           number_of_games: '10',
                           friends: %w[9 10] }
 
-      results = GameNightService.create_game_night(game_night_data)
+      results = GameNightService.create_game_night(game_night_data, user.id)
 
       game_night_response_checker(results)
 
