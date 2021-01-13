@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
       request.body = JSON.generate(body)
     end
     user_data = JSON.parse(response.body, symbolize_names: true)
-
+    
     session[:user] = user_data
 
     redirect_to dashboard_path
