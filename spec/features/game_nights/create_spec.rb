@@ -4,22 +4,25 @@ describe 'As a user' do
   describe 'When I visit /game-nights/new' do
     before :each do
       json_response1 = File.read('spec/fixtures/user_data.json')
-      stub_request(:get, "#{ENV['BACKEND_URL']}/api/v1/users/")
+      json_response1 = File.read('spec/fixtures/user_data.json')
+      stub_request(:get, "#{ENV['BACKEND_URL']}/api/v1/users/200")
         .to_return(status: 200, body: json_response1)
       json = JSON.parse(json_response1, symbolize_names: true)
       user = User.new(json)
-      friends = json[:data][:relationships][:friends][:data].map do |data|
-        Friend.new(data)
-      end
-      games = json[:data][:relationships][:games][:data].map do |data|
-        Game.new(data)
-      end
-      game_nights = json[:data][:relationships][:game_nights][:data].map do |data|
-        GameParty.new(data)
-      end
-      user.add_friends(friends)
-      user.add_games(games)
-      user.add_game_nights(game_nights)
+
+      games_response = File.read('spec/fixtures/new_user_games.json')
+      stub_request(:get, "#{ENV['BACKEND_URL']}/api/v1/users/200/games")
+        .to_return(status: 200, body: games_response)
+
+        game_nights_response = File.read('spec/fixtures/new_users_game_nights.json')
+      stub_request(:get, "#{ENV['BACKEND_URL']}/api/v1/users/200/game_nights")
+        .to_return(status: 200, body: game_nights_response)
+      
+      
+
+      friends_response = File.read('spec/fixtures/new_friends_data.json')
+      stub_request(:get, "#{ENV['BACKEND_URL']}/api/v1/users/200/friends")
+        .to_return(status: 200, body: friends_response)
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
     end
 
@@ -28,15 +31,14 @@ describe 'As a user' do
 
       fill_in :name, with: 'D&D'
       fill_in :date, with: Time.zone.today.strftime('%m-%d-%Y')
-      find(:css, "#friends_9[value='9']").set(true)
-      find(:css, "#friends_10[value='10']").set(true)
+      find(:css, "#friends_3[value='3']").set(true)
       fill_in :number_of_games, with: 10
     end
 
     it 'When I fill out the form and submit it, I see my new game night' do
       visit '/game-nights/new'
 
-      json_response = File.read('spec/fixtures/game_night_data.json')
+      json_response = File.read('spec/fixtures/success.json')
       stub_request(:post, "#{ENV['BACKEND_URL']}/api/v1/game_nights")
         .to_return(status: 200, body: json_response)
 
@@ -46,11 +48,10 @@ describe 'As a user' do
 
       fill_in :name, with: 'D&D'
       fill_in :date, with: Time.zone.today.strftime('%m-%d-%Y')
-      find(:css, "#friends_9[value='9']").set(true)
-      find(:css, "#friends_10[value='10']").set(true)
+      find(:css, "#friends_3[value='3']").set(true)
       fill_in :number_of_games, with: 10
       click_on "Let's Play!"
-      expect(current_path).to eq('/game-nights/2')
+      expect(current_path).to eq('/dashboard')
     end
 
     it 'If I do not add the correct data (no friends), no game night' do

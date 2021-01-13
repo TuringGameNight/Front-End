@@ -8,18 +8,20 @@ describe 'As an authenticated user' do
         .to_return(status: 200, body: json_response1)
       json = JSON.parse(json_response1, symbolize_names: true)
       user = User.new(json)
-      friends = json[:data][:relationships][:friends][:data].map do |data|
-        Friend.new(data)
-      end
-      games = json[:data][:relationships][:games][:data].map do |data|
-        Game.new(data)
-      end
-      game_nights = json[:data][:relationships][:game_nights][:data].map do |data|
-        GameParty.new(data)
-      end
-      user.add_friends(friends)
-      user.add_games(games)
-      user.add_game_nights(game_nights)
+      
+
+      friends_response = File.read('spec/fixtures/new_friends_data.json')
+      stub_request(:get, "#{ENV['BACKEND_URL']}/api/v1/users/200/friends")
+        .to_return(status: 200, body: friends_response)
+
+        games_response = File.read('spec/fixtures/new_user_games.json')
+      stub_request(:get, "#{ENV['BACKEND_URL']}/api/v1/users/200/games")
+        .to_return(status: 200, body: games_response)
+
+        game_nights_response = File.read('spec/fixtures/new_users_game_nights.json')
+      stub_request(:get, "#{ENV['BACKEND_URL']}/api/v1/users/200/game_nights")
+        .to_return(status: 200, body: game_nights_response)
+      
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
     end
 
@@ -31,19 +33,17 @@ describe 'As an authenticated user' do
       end
 
       within('#user-games') do
-        expect(page).to have_content('Dungeons & Dragons')
         expect(page).to have_content('Pandemic')
         expect(page).to have_button('Add a Game')
       end
 
       within('#game-nights') do
-        expect(page).to have_content('Dwarves Rule 2021')
+        expect(page).to have_content('PostgreSQL 13')
         expect(page).to have_button('Add a Game Night')
       end
 
       within('#friends') do
-        expect(page).to have_content('Sean')
-        expect(page).to have_content('Robert')
+        expect(page).to have_content('Phil')
         expect(page).to have_button('Add Friend')
       end
     end
