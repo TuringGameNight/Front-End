@@ -2,7 +2,7 @@ class Users::GamesController < ApplicationController
   before_action :is_user
 
   def create
-    response = UserFacade.add_game(params[:id])
+    response = UserFacade.add_game(params, current_user.id)
     if response.status == 200
       flash[:success] = 'Game added to your shelf!'
       redirect_to dashboard_path
