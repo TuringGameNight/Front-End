@@ -1,6 +1,6 @@
 class GameService
   def self.search(search)
-    conn = Faraday.new("#{ENV['BACKEND_URL']}/api/v1/games/find?search=#{search}")
+    conn = Faraday.new("#{ENV['BACKEND_URL']}/api/v1/games/find?name=#{search}")
     results = conn.get
     JSON.parse(results.body, symbolize_names: true)
   end
