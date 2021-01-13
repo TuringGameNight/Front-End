@@ -1,0 +1,8 @@
+{"data": 
+  [{"id": "2", "type": "user_game_night", "attributes": {"name": "PostgreSQL 13", "date": "2021-01-22", "number_of_games": 2}},
+   {"id": "3", "type": "user_game_night", "attributes": {"name": "localhost", "date": "2021-01-22", "number_of_games": 1}},
+   {"id": "4", "type": "user_game_night", "attributes": {"name": "localhost", "date": "2021-01-29", "number_of_games": -1}},
+   {"id": "5", "type": "user_game_night", "attributes": {"name": "localhost", "date": "2021-01-29", "number_of_games": -1}},
+   {"id": "6", "type": "user_game_night", "attributes": {"name": "localhost", "date": "2021-01-29", "number_of_games": -1}},
+   {"id": "7", "type": "user_game_night", "attributes": {"name": "PostgreSQL 13 2", "date": "2021-01-21", "number_of_games": 1}},
+   {"id": "8", "type": "user_game_night", "attributes": {"name": "PostgreSQL 13 2", "date": "2021-01-21", "number_of_games": 1}}]}

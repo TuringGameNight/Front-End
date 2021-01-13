@@ -1,0 +1,24 @@
+{"data": 
+  [{"id": "2", "type": "games", "attributes": {"name": "Pandemic", "game_type": "Board/Strategy", "description": "It is our life now", "duration": 95, "image": "IMAGE", "num_players": "4", "age_range": "15"}},
+   {"id": "3",
+    "type": "games",
+    "attributes": 
+     {"name": "Gloomhaven",
+      "game_type": "Adventure, Fantasy",
+      "description": 
+       "<p>Gloomhaven is a game of Euro-inspired tactical combat in a persistent world of shifting motives. Players will take on the role of a wandering adventurer with their own special set of skills and their own reasons for traveling to this dark corner of the world.<br /><br />Players must work together out of necessity to clear out menacing dungeons and forgotten ruins. In the process they will enhance their abilities with experience and loot, discover new locations to explore and plunder, and expand an ever-branching story fueled by the decisions they make.<br /><br />This is a legacy game with a persistent and changing world that is ideally played over many game sessions. After a scenario, players will make decisions on what to do, which will determine how the story continues, kind of like a &quot;Choose Your Own Adventure&quot; book. Playing through a scenario is a cooperative affair where players will fight against automated monsters using an innovative card system to determine the order of play and what a player does on their turn.</p>",
+      "duration": 150,
+      "image": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1559254920151-51ulRXlJ7LL.jpg",
+      "num_players": "1-4",
+      "age_range": "12+"}},
+   {"id": "4",
+    "type": "games",
+    "attributes": 
+     {"name": "Wingspan",
+      "game_type": "Animals, Card Game, Dice, Resource Management",
+      "description": 
+       "<p><em><strong>Wingspan</strong></em> is a competitive, medium-weight, card-driven, engine-building board game from Stonemaier Games.</p>\r\n<p>You are bird enthusiasts—researchers, bird watchers, ornithologists, and collectors—seeking to discover and attract the best birds to your aviary. Each bird extends a chain of powerful combinations in one of your habitats (actions). These habitats focus on several key aspects of growth:</p>\r\n<ul>\r\n<li>Gain food tokens via custom dice in a birdfeeder dice tower</li>\r\n<li>Lay eggs using egg miniatures in a variety of colors</li>\r\n<li>Draw from hundreds of unique bird cards and play them</li>\r\n</ul>\r\n<p>The winner is the player with the most points after 4 rounds.</p>",
+      "duration": 70,
+      "image": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1545152463996",
+      "num_players": "1-5",
+      "age_range": "10+"}}]}
