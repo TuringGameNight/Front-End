@@ -28,7 +28,7 @@ describe 'As a user' do
         visit '/dashboard'
 
         json_response2 = File.read('spec/fixtures/games_search_data.json')
-        stub_request(:get, "#{ENV['BACKEND_URL']}/api/v1/games/find?search=Catan")
+        stub_request(:get, "#{ENV['BACKEND_URL']}/api/v1/games/find?name=Catan")
           .to_return(status: 200, body: json_response2)
 
         json_response3 = File.read('spec/fixtures/users_add_game.json')
@@ -52,7 +52,7 @@ describe 'As a user' do
         visit '/dashboard'
 
         json_response2 = File.read('spec/fixtures/games_search_data.json')
-        stub_request(:get, "#{ENV['BACKEND_URL']}/api/v1/games/find?search=Catan")
+        stub_request(:get, "#{ENV['BACKEND_URL']}/api/v1/games/find?name=Catan")
           .to_return(status: 200, body: json_response2)
 
         json_response3 = File.read('spec/fixtures/users_add_game.json')

@@ -8,6 +8,6 @@ class ApplicationController < ActionController::Base
   end
 
   def current_user
-    @current_user ||= User.new(session[:user])
+    @current_user ||= User.new(session[:user]) unless session[:user].nil?
   end
 end
