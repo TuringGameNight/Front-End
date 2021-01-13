@@ -26,6 +26,7 @@ gem 'faraday'
 gem 'figaro'
 gem 'travis'
 gem 'omniauth-google-oauth2'
+gem 'bootstrap', '~> 4.0.0'
 gem 'activerecord-session_store'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
