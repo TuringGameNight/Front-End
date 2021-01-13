@@ -19,8 +19,8 @@
     <%= f.label :duration, style: "text-align: center;" %>
     <%= f.number_field :duration %><br><br>
 
-    <%= f.label :image, style: "text-align: center;" %>(Opt.)
-    <%= f.text_field :image %><br><br>
+    <%= f.label :image, style: "text-align: center;" %>
+    <%= f.text_field :image, placeholder: "Optional URL", style: "text-align: center;"%><br><br>
 
     <%= f.submit "Suggest Game", class: "btn btn-primary shadow" %>
   <% end %>
