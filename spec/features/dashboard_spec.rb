@@ -8,7 +8,7 @@ describe 'As an authenticated user' do
         .to_return(status: 200, body: json_response1)
       json = JSON.parse(json_response1, symbolize_names: true)
       user = User.new(json)
-      
+
 
       friends_response = File.read('spec/fixtures/new_friends_data.json')
       stub_request(:get, "#{ENV['BACKEND_URL']}/api/v1/users/200/friends")
@@ -21,14 +21,14 @@ describe 'As an authenticated user' do
         game_nights_response = File.read('spec/fixtures/new_users_game_nights.json')
       stub_request(:get, "#{ENV['BACKEND_URL']}/api/v1/users/200/game_nights")
         .to_return(status: 200, body: game_nights_response)
-      
+
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
     end
 
     it 'I see a welcome message, a list of my game nights, a list of my games and a list of my friends' do
       visit dashboard_path
 
-      within('#welcome-message') do
+      within('.welcome-name') do
         expect(page).to have_content('Welcome Jake!')
       end
 
