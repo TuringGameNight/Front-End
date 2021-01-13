@@ -1,6 +1,10 @@
 class DashboardController < ApplicationController
+  before_action :is_user
+
   def index
-    # Below will eventually need to be replaced by current_user
-    @user = UserFacade.user_info('200')
+    @user = current_user
+    @friends = UserFacade.get_friends(@user.id)
+    @games = UserFacade.get_games(@user.id)
+    @game_nights = UserFacade.get_game_nights(@user.id)
   end
 end

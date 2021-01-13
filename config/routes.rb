@@ -2,7 +2,10 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root 'home#index'
 
-  resources :dashboard, only: [:index]
+  get '/auth/google_oauth2', as: :google_login
+  get '/auth/google_oauth2/callback', to: 'sessions#create'
+
+  get :dashboard, to: 'dashboard#index'
 
   get "/game-nights/new", to: "game_nights#new"
   post "/game-nights", to: "game_nights#create"
@@ -13,9 +16,9 @@ Rails.application.routes.draw do
     get '/search', to: "search#new"
     get '/search/results', to: "search#index"
   end
-  
+
   namespace :users do
-    post '/games/:id', to: 'games#create'
+    post '/games', to: 'games#create'
   end
 
 end

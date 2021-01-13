@@ -4,28 +4,28 @@
 <div id="user-games">
   <%= button_to 'Add a Game', '/games/search', method: :get %>
   <ul>
-    <% @user.games.each do |game| %>
+    <% @games.each do |game| %>
       <li><%= game.name %></li>
     <% end %>
   </ul>
 </div>
 <div id="game-nights">
-  <%= button_to 'Add a Game Night', game_nights_new_path %>
+  <%= button_to 'Add a Game Night', game_nights_new_path, method: :get%>
   <ul>
-    <% @user.game_nights.each do |game_night| %>
+    <% @game_nights.each do |game_night| %>
       <li><%= game_night.name %></li>
     <% end %>
   </ul>
 </div>
 <div id="friends">
   <h3>Add a Friend</h3>
-    <%= form_tag dashboard_index_path, method: :post do %>
+    <%= form_tag "/users/friends", method: :post do %>
       <%= label_tag :friend_email %>
       <%= text_field_tag :friend_email %>
       <%= submit_tag 'Add Friend' %>
     <% end %>
   <ul>
-    <% @user.friends.each do |friend| %>
+    <% @friends.each do |friend| %>
       <li><%= friend.name %></li>
     <% end %>
   </ul>
