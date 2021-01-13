@@ -18,7 +18,7 @@ Rails.application.routes.draw do
   end
 
   namespace :users do
-    post '/games/:id', to: 'games#create'
+    post '/games', to: 'games#create'
   end
 
 end
