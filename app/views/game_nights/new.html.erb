@@ -8,7 +8,11 @@
   <%= f.label :number_of_games %>
   <%= f.number_field :number_of_games, value: params[:number_of_games] %><br><br>
 
-  <%= f.collection_check_boxes :friends, @friends, :id, :name %>
-
+  <p>Add Friends: </p>
+  <% if @friends.empty? %>
+    <p>You have no friends. Please add some on your dashboard before you make a party. </p>
+  <% else %>
+    <%= f.collection_check_boxes :friends, @friends, :id, :name %>
+  <% end %>
   <%= f.submit "Let's Play!" %>
 <% end %>
