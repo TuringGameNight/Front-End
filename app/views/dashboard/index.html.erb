@@ -1,7 +1,6 @@
 
 <body style="background-color: #e8cbc0; background: -webkit-linear-gradient(to right, #e8cbc0, #636fa4); background: linear-gradient(to right, #e8cbc0, #636fa4);">
 
-
 <div class="container py-5">
     <div class="row text-center text-black">
         <div class="col-lg-8 mx-auto">
@@ -13,8 +12,6 @@
         </div>
     </div>
 </div>
-
-
 
 <div class="container py-5">
   <div class="row">
@@ -28,7 +25,6 @@
           <% end %>
         </ul>
       </div>
-
     </div>
 
     <div class="shadow p-3 pop-out col-md card m-3 align-items-center scroll" id="game-nights">
@@ -41,7 +37,22 @@
           <% end %>
         </ul>
       </div>
+      <div class="container invitations">
+        <h4>Pending Invitations</h4>
+        <ul class="row mt-3">
+          <% @game_night_invites.each do |invite| %>
+            <li class="card m-3 p-2"><%= invite.host_name %>
+              Host Name: <%= invite.name %><br>
+              Date: <%= invite.date %><br>
+              # of Games: <%= invite.number_of_games %><br>
+              <%= button_to "Accept", "", class: "btn btn-success shadow" %>
+              <%= button_to "Decline", "", class: "btn btn-danger shadow" %>
+            </li>
+          <% end %>
+        </ul>
+      </div>
     </div>
+
 
     <div class="shadow p-3 pop-out col-md card m-3 align-items-center scroll shadow-4" id="friends">
       <h3 class="card-title">Friends</h3>
