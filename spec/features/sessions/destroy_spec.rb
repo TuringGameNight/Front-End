@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 describe 'As a user' do
-  describe 'I can logout' do
-    # need to make this
-  end
+  it 'I can logout' do
+  end 
 end
