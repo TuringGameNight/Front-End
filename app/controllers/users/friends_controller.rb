@@ -11,4 +11,13 @@ class Users::FriendsController < ApplicationController
       redirect_to dashboard_path
     end
   end
+
+  def update
+    response = UserFacade.accept_friend_request(params[:user_id], params[:friend_id])
+    redirect_to dashboard_path
+  end
+  #
+  # def destroy
+  #
+  # end
 end
