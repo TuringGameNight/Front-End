@@ -7,7 +7,6 @@
             <h1 class="welcome-name display-4" id="welcome-message">Welcome <%= @user.name %>! </h1>
             <p class="lead mb-0" id="welcome-message">Navigate your Games, Schedule GameNights and add Friends</p>
             <p class="lead" id="welcome-message">All from your dashboard
-
             </p>
         </div>
     </div>
@@ -40,14 +39,15 @@
       <div class="container invitations">
         <h4>Pending Invitations</h4>
         <ul class="row mt-3">
+          <% if @game_night_invites %>
           <% @game_night_invites.each do |invite| %>
-            <li class="card m-3 p-2"><%= invite.host_name %>
-              Host Name: <%= invite.name %><br>
+            <li class="card m-3 p-2">Host Name: <%= invite.host_name %><br>
               Date: <%= invite.date %><br>
               # of Games: <%= invite.number_of_games %><br>
               <%= button_to "Accept", "", class: "btn btn-success shadow" %>
               <%= button_to "Decline", "", class: "btn btn-danger shadow" %>
             </li>
+            <% end %>
           <% end %>
         </ul>
       </div>
@@ -56,7 +56,7 @@
 
     <div class="shadow p-3 pop-out col-md card m-3 align-items-center scroll shadow-4" id="friends">
       <h3 class="card-title">Friends</h3>
-        <%= form_tag dashboard_path, method: :post do %>
+        <%= form_tag users_friends_path, method: :post do %>
           <%= text_field_tag :friend_email, "", placeholder: "Friend's Email", class: "m-2", style: "text-align: center;"%>
           <div class="row justify-content-center">
             <%= submit_tag 'Add Friend', class: "btn btn-primary m-2 shadow"%>
@@ -66,6 +66,19 @@
         <ul class="row mt-3">
           <% @friends.each do |friend| %>
             <li class="card m-3 p-2"><%= friend.name %></li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+
+    <div class="shadow p-3 pop-out col-md card m-3 align-items-center scroll shadow-4" id="friends">
+      <h3 class="card-title">Friend Requests</h3>
+      <div class="container">
+        <ul class="row mt-3">
+          <% @pending_friends.each do |friend| %>
+          <li class="card m-3 p-2"><%= friend.name %></li>
+            <%= button_to 'Accept', "/users/#{@user.id}/friends/#{friend.id}/", method: :patch, class: "btn btn-primary shadow"%>
+            <%= button_to 'Decline', "/users/#{@user.id}/friends/#{friend.id}/", method: :delete, class: "btn-danger btn-primary shadow"%>
           <% end %>
         </ul>
       </div>
