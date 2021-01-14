@@ -22,9 +22,10 @@ describe 'As a user' do
         .to_return(status: 200, body: game_nights_response)
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
     end
+
     it 'I can add a new game to the app' do
       body = File.read('spec/fixtures/add_game_data.json')
-      stub_request(:post, "#{ENV['BACKEND_URL']}/api/v1/games")
+      stub_request(:post, "#{ENV['BACKEND_URL']}/api/v1/users/200/games")
         .to_return(status: 200, body: body)
 
       visit new_game_path
@@ -45,7 +46,7 @@ describe 'As a user' do
 
     it 'I cannot add a new game if require data (desc) missing' do
       body = File.read('spec/fixtures/add_game_data.json')
-      stub_request(:post, "#{ENV['BACKEND_URL']}/api/v1/games")
+      stub_request(:post, "#{ENV['BACKEND_URL']}/api/v1/users/200/games")
         .to_return(status: 403, body: body)
 
       visit new_game_path
