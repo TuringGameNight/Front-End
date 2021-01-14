@@ -1,11 +1,16 @@
 <center>
+  <% if @results.empty? %>
+  <p>We can't find anything! Try again or add it below.</p>
+  <% else %>
   <table>
     <tr>
-      <th><h3 class="row ml-1">Game</h3></th>
-      <th><h3 class="mr-5">Duration</h3></th>
-      <th><h3>Add Game</h3></th>
+      <th style="min-width: 100px;"><h3 class="row ml-1">Game</h3></th>
+      <th style="min-width: 100px;"><h3 class="mr-5">Duration</h3></th>
+      <th style="min-width: 100px;"><h3>Add Game</h3></th>
     </tr>
     <div id='games-table'>
+
+
       <% @results.each do |game|%>
       <tr id="game-<%= game.name.parameterize %>">
         <td class='title'>
@@ -16,16 +21,18 @@
         </td>
         <td class='add-game'>
           <p><%= button_to "+", "/users/games/", params: {:name => game.name,
-                                                          :description => game.description,
-                                                          :duration => game.duration,
-                                                          :image => game.image,
-                                                          :game_type => game.game_type,
-                                                          :age_range => game.age_range,
-                                                          :num_players => game.num_players} %></p>
-        </td>
-      </tr>
-      <% end%>
-    </div>
-  </table>
-  <p> <%= link_to "Don't see your game? Add it!", "/games/new" %></p>
-</center>
+            :description => game.description,
+            :duration => game.duration,
+            :image => game.image,
+            :game_type => game.game_type,
+            :age_range => game.age_range,
+            :num_players => game.num_players} %></p>
+          </td>
+        </tr>
+        <% end %>
+
+      </div>
+    </table>
+    <% end %>
+    <p> <%= link_to "Don't see your game? Add it!", "/games/new" %></p>
+  </center>
