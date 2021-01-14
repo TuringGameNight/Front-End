@@ -5,23 +5,22 @@ describe 'As a user' do
     describe 'I see a list of results' do
       before :each do
         json_response1 = File.read('spec/fixtures/user_data.json')
-      stub_request(:get, "#{ENV['BACKEND_URL']}/api/v1/users/200")
-        .to_return(status: 200, body: json_response1)
-      json = JSON.parse(json_response1, symbolize_names: true)
-      user = User.new(json)
-      
+        stub_request(:get, "#{ENV['BACKEND_URL']}/api/v1/users/200")
+          .to_return(status: 200, body: json_response1)
+        json = JSON.parse(json_response1, symbolize_names: true)
+        user = User.new(json)
 
-      friends_response = File.read('spec/fixtures/new_friends_data.json')
-      stub_request(:get, "#{ENV['BACKEND_URL']}/api/v1/users/200/friends")
-        .to_return(status: 200, body: friends_response)
+        friends_response = File.read('spec/fixtures/new_friends_data.json')
+        stub_request(:get, "#{ENV['BACKEND_URL']}/api/v1/users/200/friends")
+          .to_return(status: 200, body: friends_response)
 
         games_response = File.read('spec/fixtures/new_user_games.json')
-      stub_request(:get, "#{ENV['BACKEND_URL']}/api/v1/users/200/games")
-        .to_return(status: 200, body: games_response)
+        stub_request(:get, "#{ENV['BACKEND_URL']}/api/v1/users/200/games")
+          .to_return(status: 200, body: games_response)
 
         game_nights_response = File.read('spec/fixtures/new_users_game_nights.json')
-      stub_request(:get, "#{ENV['BACKEND_URL']}/api/v1/users/200/game_nights")
-        .to_return(status: 200, body: game_nights_response)
+        stub_request(:get, "#{ENV['BACKEND_URL']}/api/v1/users/200/game_nights")
+          .to_return(status: 200, body: game_nights_response)
         allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
       end
       it 'Next to each game, I see a button to add the game to my collection' do

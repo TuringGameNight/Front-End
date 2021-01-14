@@ -8,17 +8,16 @@ describe 'As a user' do
         .to_return(status: 200, body: json_response1)
       json = JSON.parse(json_response1, symbolize_names: true)
       user = User.new(json)
-      
 
       friends_response = File.read('spec/fixtures/new_friends_data.json')
       stub_request(:get, "#{ENV['BACKEND_URL']}/api/v1/users/200/friends")
         .to_return(status: 200, body: friends_response)
 
-        games_response = File.read('spec/fixtures/new_user_games.json')
+      games_response = File.read('spec/fixtures/new_user_games.json')
       stub_request(:get, "#{ENV['BACKEND_URL']}/api/v1/users/200/games")
         .to_return(status: 200, body: games_response)
 
-        game_nights_response = File.read('spec/fixtures/new_users_game_nights.json')
+      game_nights_response = File.read('spec/fixtures/new_users_game_nights.json')
       stub_request(:get, "#{ENV['BACKEND_URL']}/api/v1/users/200/game_nights")
         .to_return(status: 200, body: game_nights_response)
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
@@ -35,7 +34,7 @@ describe 'As a user' do
       expect(page).to have_content('2021-01-22')
       expect(page).to have_content('1')
       expect(page).to have_content('Phil')
-      
+
       expect(page).to have_link('Gloomhaven')
     end
 

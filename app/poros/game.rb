@@ -8,7 +8,7 @@ class Game
               :num_players,
               :id
 
-  def initialize(data, id=nil)
+  def initialize(data, id = nil)
     @name = data[:name]
     @duration = data[:duration]
     @description = data[:description]
