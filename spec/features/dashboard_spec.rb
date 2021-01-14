@@ -43,12 +43,25 @@ describe 'As an authenticated user' do
       within('#game-nights') do
         expect(page).to have_content('PostgreSQL 13')
         expect(page).to have_button('Add a Game Night')
+        save_and_open_page
       end
 
       within('#friends') do
         expect(page).to have_content('Phil')
         expect(page).to have_button('Add Friend')
       end
+
+      within('.invitations') do
+        expect(page).to have_content('Brad Gamer')
+        expect(page).to have_content("Pandemic Legacy Season 2: Episode 3")
+        expect(page).to have_content("01-16-2021")
+        expect(page).to have_content("3")
+        expect(page).to have_button("Accept")
+        expect(page).to have_button("Decline")
+        save_and_open_page
+      end
+
+
 
     end
 
