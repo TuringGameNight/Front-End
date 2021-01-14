@@ -45,7 +45,7 @@ class UserFacade
   def self.get_game_night_invites(user_id)
     json = UserService.get_game_night_invites(user_id)
     invites = json[:data][:relationships][:invitations]
-    invites[:data].each do |data|
+    this = invites[:data].map do |data|
       Invite.new(data)
     end
   end
