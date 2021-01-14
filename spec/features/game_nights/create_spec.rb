@@ -17,11 +17,6 @@ describe 'As a user' do
       game_nights_response = File.read('spec/fixtures/new_users_game_nights.json')
       stub_request(:get, "#{ENV['BACKEND_URL']}/api/v1/users/200/game_nights")
         .to_return(status: 200, body: game_nights_response)
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 7180468584f868e020f2bc465f46c589311b8ac5
 
       friends_response = File.read('spec/fixtures/new_friends_data.json')
       stub_request(:get, "#{ENV['BACKEND_URL']}/api/v1/users/200/friends")
