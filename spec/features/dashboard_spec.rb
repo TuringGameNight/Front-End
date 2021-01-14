@@ -9,7 +9,6 @@ describe 'As an authenticated user' do
       json = JSON.parse(json_response1, symbolize_names: true)
       user = User.new(json)
 
-
       friends_response = File.read('spec/fixtures/new_friends_data.json')
       stub_request(:get, "#{ENV['BACKEND_URL']}/api/v1/users/200/friends")
         .to_return(status: 200, body: friends_response)
@@ -21,6 +20,10 @@ describe 'As an authenticated user' do
         game_nights_response = File.read('spec/fixtures/new_users_game_nights.json')
       stub_request(:get, "#{ENV['BACKEND_URL']}/api/v1/users/200/game_nights")
         .to_return(status: 200, body: game_nights_response)
+
+        game_night_invites_response = File.read('spec/fixtures/user_data.json')
+      stub_request(:get, "#{ENV['BACKEND_URL']}/api/v1/users/200/invitations")
+        .to_return(status: 200, body: game_night_invites_response)
 
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
     end
@@ -46,6 +49,7 @@ describe 'As an authenticated user' do
         expect(page).to have_content('Phil')
         expect(page).to have_button('Add Friend')
       end
+
     end
 
     it 'If I am not logged in, I am taken to the homepage' do
