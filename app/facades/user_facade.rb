@@ -52,4 +52,8 @@ class UserFacade
   def self.add_friend(friend_email, user_id)
     UserService.add_friend(friend_email, user_id)
   end
+
+  def self.accept_friend_request(user_id, friend_id)
+    json = UserService.accept_friend_request(user_id, friend_id)
+  end
 end

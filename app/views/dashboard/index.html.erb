@@ -66,8 +66,8 @@
         <ul class="row mt-3">
           <% @pending_friends.each do |friend| %>
           <li class="card m-3 p-2"><%= friend.name %></li>
-            <%= button_to 'Accept', class: "btn btn-primary shadow"%>
-            <%= button_to 'Decline', class: "btn btn-primary shadow"%>
+            <%= button_to 'Accept', "/users/#{@user.id}/friends/#{friend.id}/", method: :patch, class: "btn btn-primary shadow"%>
+            <%= button_to 'Decline', "/users/#{@user.id}/friends/#{friend.id}/", method: :delete, class: "btn-danger btn-primary shadow"%>
           <% end %>
         </ul>
       </div>
