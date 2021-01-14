@@ -5,7 +5,7 @@ class GameService
     JSON.parse(results.body, symbolize_names: true)
   end
 
-  def self.create_game(data, _user)
+  def self.create_game(data, user)
     body = { name: data[:name],
              game_type: data[:game_type],
              description: data[:description],
@@ -13,7 +13,7 @@ class GameService
              duration: data[:duration],
              image: data[:image] }
 
-    conn = Faraday.new("#{ENV['BACKEND_URL']}/api/v1/games")
+    conn = Faraday.new("#{ENV['BACKEND_URL']}/api/v1/users/#{user.id}/games")
 
     response = conn.post do |request|
       request.body = JSON.generate(body)
