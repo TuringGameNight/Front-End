@@ -30,7 +30,7 @@ class UserFacade
 
   def self.get_friend_requests(user_id)
     json = UserService.get_friends(user_id)
-    json[:data[:attributes][:pending_friends].map do |friend_request|
+    json[:data][:attributes][:pending_friends].map do |friend_request|
       Friend.new(friend_request)
     end
   end

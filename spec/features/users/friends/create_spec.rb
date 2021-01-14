@@ -12,7 +12,7 @@ describe 'as an authenticated user' do
       stub_request(:get, "#{ENV['BACKEND_URL']}/api/v1/users/200")
         .to_return(status: 200, body: json_response1)
       json_2 = JSON.parse(json_response1, symbolize_names: true)
-      user_2 = User.new(json_2)
+      @user_2 = User.new(json_2)
 
       friends_response = File.read('spec/fixtures/new_friends_data.json')
       stub_request(:get, "#{ENV['BACKEND_URL']}/api/v1/users/200/friends")
@@ -45,9 +45,9 @@ describe 'as an authenticated user' do
       fill_in :friend_email, with: 'flo@progressive.com'
       click_button('Add Friend')
       expect(current_path).to eq(dashboard_path)
-
+      save_and_open_page
       within('#pending_friends') do
-        expect(page).to have_content(user_2.name)
+        expect(page).to have_content(@user_2.name)
         expect(page).to have_content('Pending')
       end
     end

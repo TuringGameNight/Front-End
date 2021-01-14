@@ -60,14 +60,14 @@
       </div>
     </div>
 
-    <div class="shadow p-3 pop-out col-md card m-3 align-items-center scroll shadow-4" id="friends">
+    <div class="shadow p-3 pop-out col-md card m-3 align-items-center scroll shadow-4" id="pending_friends">
       <h3 class="card-title">Friend Requests</h3>
       <div class="container">
         <ul class="row mt-3">
           <% @pending_friends.each do |friend| %>
           <li class="card m-3 p-2"><%= friend.name %></li>
-            <%= button_to 'Accept', api_v1_user_friend_path, method: :patch, class: "btn btn-primary shadow"%>
-            <%= button_to 'Decline', api_v1_user_friend_path, method: :delete, class: "btn btn-primary shadow"%>
+            <%= button_to 'Accept', class: "btn btn-primary shadow"%>
+            <%= button_to 'Decline', class: "btn btn-primary shadow"%>
           <% end %>
         </ul>
       </div>
