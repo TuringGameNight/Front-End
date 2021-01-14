@@ -17,8 +17,8 @@ describe 'As a user' do
         game_nights_response = File.read('spec/fixtures/new_users_game_nights.json')
       stub_request(:get, "#{ENV['BACKEND_URL']}/api/v1/users/200/game_nights")
         .to_return(status: 200, body: game_nights_response)
-      
-      
+
+
 
       friends_response = File.read('spec/fixtures/new_friends_data.json')
       stub_request(:get, "#{ENV['BACKEND_URL']}/api/v1/users/200/friends")
@@ -31,7 +31,7 @@ describe 'As a user' do
 
       fill_in :name, with: 'D&D'
       fill_in :date, with: Time.zone.today.strftime('%m-%d-%Y')
-      find(:css, "#friends_3[value='3']").set(true)
+      find(:css, "#friends_12[value='12']").set(true)
       fill_in :number_of_games, with: 10
     end
 
@@ -48,7 +48,7 @@ describe 'As a user' do
 
       fill_in :name, with: 'D&D'
       fill_in :date, with: Time.zone.today.strftime('%m-%d-%Y')
-      find(:css, "#friends_3[value='3']").set(true)
+      find(:css, "#friends_12[value='12']").set(true)
       fill_in :number_of_games, with: 10
       click_on "Let's Play!"
       expect(current_path).to eq('/dashboard')

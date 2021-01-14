@@ -1,9 +1,10 @@
 class Friend
-  attr_reader :id, :name, :image
+  attr_reader :id, :name, :image, :email
 
   def initialize(data)
     @id = data[:id]
-    @name = data[:attributes][:name]
-    @image = data[:attributes][:image]
+    @name = data[:name]
+    @image = data[:image]
+    @email = data[:email]
   end
 end
