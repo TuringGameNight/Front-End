@@ -10,7 +10,7 @@ class Game
 
   def initialize(data, id = nil)
     @name = data[:name]
-    @duration = data[:duration]
+    @duration = data[:duration] ||= 0
     @description = data[:description]
     @age_range = data[:age_range]
     @game_type = data[:game_type]
