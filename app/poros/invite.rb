@@ -8,7 +8,7 @@ class Invite
               :host_name
 
   def initialize(data)
-    @id = data[:id]
+    @id = data[:id].to_i
     @host_name = data[:host_name]
     @name = data[:name]
     @date = data[:date]
