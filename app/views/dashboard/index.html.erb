@@ -45,7 +45,7 @@
 
     <div class="shadow p-3 pop-out col-md card m-3 align-items-center scroll shadow-4" id="friends">
       <h3 class="card-title">Friends</h3>
-        <%= form_tag dashboard_path, method: :post do %>
+        <%= form_tag users_friends_path, method: :post do %>
           <%= text_field_tag :friend_email, "", placeholder: "Friend's Email", class: "m-2", style: "text-align: center;"%>
           <div class="row justify-content-center">
             <%= submit_tag 'Add Friend', class: "btn btn-primary m-2 shadow"%>

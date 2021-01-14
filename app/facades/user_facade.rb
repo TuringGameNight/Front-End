@@ -41,4 +41,11 @@ class UserFacade
       GameParty.new(data)
     end
   end
+
+  def self.add_friend(friend_email, user_id)
+    json = UserService.add_friend(friend_email, user_id)
+    json[:data][:attributes][:accepted_friends].map do |data|
+      Friend.new(data)
+    end 
+  end
 end

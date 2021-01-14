@@ -38,4 +38,17 @@ class UserService
     results = conn.get
     JSON.parse(results.body, symbolize_names: true)
   end
+
+  def self.add_friend(friend_email, user_id)
+    body = {
+      user_id: user_id,
+      friend_email: friend_email
+    }
+
+    conn = Faraday.new("#{ENV['BACKEND_URL']}/api/v1/users/#{user_id}/friends")
+require "pry"; binding.pry
+    response = conn.post do |request|
+      response.body = JSON.generate(body)
+    end
+  end
 end
