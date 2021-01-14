@@ -20,7 +20,7 @@ class Users::GamesController < ApplicationController
   private
 
   def has_game?(_game_name, session)
-    if session[:user][:data][:attributes][:games].count > 0
+    unless session[:user][:data][:attributes][:games].nil?
       session[:user][:data][:attributes][:games].any? do |game|
         game[:name] == (params[:name])
       end
