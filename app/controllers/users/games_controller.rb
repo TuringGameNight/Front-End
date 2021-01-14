@@ -19,7 +19,7 @@ class Users::GamesController < ApplicationController
 
   private
 
-  def has_game?(game_name, session)
+  def has_game?(_game_name, session)
     session[:user][:data][:attributes][:games].any? do |game|
       game[:name] == (params[:name])
     end
