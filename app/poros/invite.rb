@@ -3,16 +3,16 @@ class Invite
               :host_name,
               :name,
               :date,
-              :user_id,
+              :host_id,
               :number_of_games,
               :host_name
 
   def initialize(data)
     @id = data[:id].to_i
-    @host_name = data[:host_name]
-    @name = data[:name]
-    @date = data[:date]
-    @user_id = data[:user_id]
-    @number_of_games = data[:number_of_games]
+    @host_name = data[:attributes][:game_night][:host_name]
+    @name = data[:attributes][:game_night][:name]
+    @date = data[:attributes][:game_night][:date]
+    @host_id = data[:attributes][:game_night][:host_id]
+    @number_of_games = data[:attributes][:game_night][:number_of_games]
   end
 end
