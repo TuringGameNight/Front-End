@@ -51,4 +51,16 @@ require "pry"; binding.pry
       response.body = JSON.generate(body)
     end
   end
+
+  def self.accept_friend_request(user_id, friend_id)
+    body = {
+      user_id: user_id,
+      friend_id: friend_id,
+      status: 'accepted'
+    }
+    conn = Faraday.new("#{ENV['BACKEND_URL']}/api/v1/users/#{user_id}/friends/#{friend_id}")
+    response = conn.patch do |request|
+      request.body = JSON.generate(body)
+    end
+  end
 end
