@@ -10,7 +10,7 @@ class GameNightsController < ApplicationController
     game_night = GameNightFacade.create_game_night(params, current_user.id)
     if game_night[:message] == 'success'
       flash[:success] = 'Game night created successfully!'
-      redirect_to "/dashboard"
+      redirect_to '/dashboard'
     else
       flash.now[:error] = 'Please fill out all required fields.'
       @user = current_user
