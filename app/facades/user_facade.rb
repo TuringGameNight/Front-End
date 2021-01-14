@@ -28,6 +28,13 @@ class UserFacade
     end
   end
 
+  def self.get_friend_requests(user_id)
+    json = UserService.get_friends(user_id)
+    json[:data[:attributes][:pending_friends].map do |friend_request|
+      Friend.new(friend_request)
+    end
+  end
+
   def self.get_games(user_id)
     json = UserService.get_games(user_id)
     json[:data].map do |data|
@@ -46,6 +53,6 @@ class UserFacade
     json = UserService.add_friend(friend_email, user_id)
     json[:data][:attributes][:accepted_friends].map do |data|
       Friend.new(data)
-    end 
+    end
   end
 end
