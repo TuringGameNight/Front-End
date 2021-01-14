@@ -7,7 +7,7 @@ RSpec.describe UserService do
       stub_request(:post, "#{ENV['BACKEND_URL']}/api/v1/game_nights")
         .to_return(status: 200, body: json_response)
 
-        json_response1 = File.read('spec/fixtures/user_data.json')
+      json_response1 = File.read('spec/fixtures/user_data.json')
       stub_request(:get, "#{ENV['BACKEND_URL']}/api/v1/users/200")
         .to_return(status: 200, body: json_response1)
       json = JSON.parse(json_response1, symbolize_names: true)

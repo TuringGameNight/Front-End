@@ -6,7 +6,6 @@ class UserService
   end
 
   def self.add_game(params, user_id)
-    
     body = { name: params[:name],
              description: params[:description],
              duration: params[:duration],
@@ -14,7 +13,7 @@ class UserService
              game_type: params[:game_type],
              age_range: params[:age_range],
              num_players: params[:num_players],
-             user_id: user_id} # Once current user method exists, pass thier id with thi]s
+             user_id: user_id } # Once current user method exists, pass thier id with thi]s
     conn = Faraday.new("#{ENV['BACKEND_URL']}/api/v1/users/#{user_id}/games")
 
     response = conn.post do |request|

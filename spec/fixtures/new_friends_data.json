@@ -1,1 +1,21 @@
-{"data":[{"id":"3","type":"friends","attributes":{"name":"Phil","email":"Phil@example.com"}}]}
+{"data":
+  { "id": "9",
+    "type": "friends",
+    "attributes": {
+      "accepted_friends": [
+        {
+          "id": "12",
+          "name":"Phil",
+          "email":"Phil@example.com"
+          }
+          ],
+      "pending_friends": [
+        {
+          "id": "13",
+          "name":"Sue",
+          "email":"Sue@example.com"
+          }
+          ]
+        }
+    }
+}

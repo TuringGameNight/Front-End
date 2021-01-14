@@ -9,10 +9,16 @@ class SessionsController < ApplicationController
     response = Faraday.post("#{ENV['BACKEND_URL']}/api/v1/users") do |request|
       request.body = JSON.generate(body)
     end
+
     user_data = JSON.parse(response.body, symbolize_names: true)
-    
+
     session[:user] = user_data
 
     redirect_to dashboard_path
+  end
+
+  def destroy
+    session.destroy
+    redirect_to root_path
   end
 end

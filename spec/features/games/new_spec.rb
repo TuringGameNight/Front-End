@@ -8,24 +8,24 @@ describe 'As a user' do
         .to_return(status: 200, body: json_response1)
       json = JSON.parse(json_response1, symbolize_names: true)
       user = User.new(json)
-      
 
       friends_response = File.read('spec/fixtures/new_friends_data.json')
       stub_request(:get, "#{ENV['BACKEND_URL']}/api/v1/users/200/friends")
         .to_return(status: 200, body: friends_response)
 
-        games_response = File.read('spec/fixtures/new_user_games.json')
+      games_response = File.read('spec/fixtures/new_user_games.json')
       stub_request(:get, "#{ENV['BACKEND_URL']}/api/v1/users/200/games")
         .to_return(status: 200, body: games_response)
 
-        game_nights_response = File.read('spec/fixtures/new_users_game_nights.json')
+      game_nights_response = File.read('spec/fixtures/new_users_game_nights.json')
       stub_request(:get, "#{ENV['BACKEND_URL']}/api/v1/users/200/game_nights")
         .to_return(status: 200, body: game_nights_response)
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
     end
+
     it 'I can add a new game to the app' do
       body = File.read('spec/fixtures/add_game_data.json')
-      stub_request(:post, "#{ENV['BACKEND_URL']}/api/v1/games")
+      stub_request(:post, "#{ENV['BACKEND_URL']}/api/v1/users/200/games")
         .to_return(status: 200, body: body)
 
       visit new_game_path
@@ -46,7 +46,7 @@ describe 'As a user' do
 
     it 'I cannot add a new game if require data (desc) missing' do
       body = File.read('spec/fixtures/add_game_data.json')
-      stub_request(:post, "#{ENV['BACKEND_URL']}/api/v1/games")
+      stub_request(:post, "#{ENV['BACKEND_URL']}/api/v1/users/200/games")
         .to_return(status: 403, body: body)
 
       visit new_game_path
