@@ -41,4 +41,13 @@ class UserFacade
       GameParty.new(data)
     end
   end
+
+  def self.get_game_night_invites(user_id)
+    json = UserService.get_game_night_invites(user_id)
+    invites = json[:data][:relationships][:invitations]
+    invites[:data].each do |data|
+      Invite.new(data)
+    end
+  end
+
 end
