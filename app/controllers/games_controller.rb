@@ -10,8 +10,8 @@ class GamesController < ApplicationController
     response = GameFacade.create_game(params, user)
     # need to pass user so backend can add the game to the user, not sure how
     if response.status == 200
-      flash[:success] = 'Game created successfully and added to your shelf!'
-      redirect_to dashboard_path
+      flash.now[:success] = 'Game created successfully and added to your shelf!'
+      render :new
     else
       # how do we deal with errors coming from the back end? This will need to change.
       flash.now[:error] = 'Please fill in all required fields.'
