@@ -14,11 +14,9 @@ describe 'As a user' do
       stub_request(:get, "#{ENV['BACKEND_URL']}/api/v1/users/200/games")
         .to_return(status: 200, body: games_response)
 
-        game_nights_response = File.read('spec/fixtures/new_users_game_nights.json')
+      game_nights_response = File.read('spec/fixtures/new_users_game_nights.json')
       stub_request(:get, "#{ENV['BACKEND_URL']}/api/v1/users/200/game_nights")
         .to_return(status: 200, body: game_nights_response)
-
-
 
       friends_response = File.read('spec/fixtures/new_friends_data.json')
       stub_request(:get, "#{ENV['BACKEND_URL']}/api/v1/users/200/friends")
