@@ -11,7 +11,7 @@ class Users::GamesController < ApplicationController
         redirect_to dashboard_path
       else
         # how do we deal with errors coming from the back end? This will need to change.
-        flash[:error].now = 'Something went wrong. Please try again.'
+        flash[:error] = 'Something went wrong. Please try again.'
         redirect_to games_search_path
       end
     end

@@ -22,6 +22,8 @@ describe 'As a user' do
         stub_request(:get, "#{ENV['BACKEND_URL']}/api/v1/users/200/game_nights")
           .to_return(status: 200, body: game_nights_response)
         allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
+
+        Users::GamesController.any_instance.stub(:has_game?).and_return(false)
       end
       it 'Next to each game, I see a button to add the game to my collection' do
         visit '/dashboard'
