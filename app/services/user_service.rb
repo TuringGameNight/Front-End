@@ -6,7 +6,7 @@ class UserService
   end
 
   def self.add_game(params, user_id)
-    
+
     body = { name: params[:name],
              description: params[:description],
              duration: params[:duration],
@@ -39,4 +39,11 @@ class UserService
     results = conn.get
     JSON.parse(results.body, symbolize_names: true)
   end
+
+  def self.get_game_night_invites(user_id)
+    conn = Faraday.new("#{ENV['BACKEND_URL']}/api/v1/users/#{user_id}/invitations")
+    results = conn.get
+    JSON.parse(results.body, symbolize_names: true)
+  end
+
 end
