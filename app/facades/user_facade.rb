@@ -59,4 +59,9 @@ class UserFacade
   def self.accept_friend_request(user_id, friend_id)
     json = UserService.accept_friend_request(user_id, friend_id)
   end
+
+  def self.decline_friend_request(user_id, friend_id)
+    json = UserService.decline_friend_request(user_id, friend_id)
+  end
+
 end
