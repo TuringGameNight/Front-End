@@ -39,7 +39,7 @@ describe 'As a user' do
       fill_in :image, with: 'https://boardgamegeek.com/image/3918905/everdell'
 
       click_on 'Suggest Game'
-
+      
       expect(page).to have_content('Game created successfully and added to your shelf!')
       expect(current_path).to eq(dashboard_path)
     end

@@ -1,8 +1,6 @@
 class GamesController < ApplicationController
   before_action :is_user
 
-  caches_action :new
-
   def new
     @user = current_user
   end

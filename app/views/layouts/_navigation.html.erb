@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">GameNight</a>
+    <a class="navbar-brand" href='/'>GameNight</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -9,20 +9,22 @@
         <li class="nav-item">
           <%= link_to 'Find Games', games_search_path, :class => 'nav-link' %>
         </li>
-        <li class="nav-item">
-          <%= link_to 'Create New Game', new_game_path, :class => 'nav-link' %>
-        </li>
         <li class="nav-item pr-5">
           <%= link_to 'Create Game Night', game_nights_new_path, :class => 'nav-link' %>
         </li>
         </ul>
         <ul class="navbar-nav ml-auto flex-nowrap">
-        <li class="nav-item">
+        <li class="nav-item mb-2">
           <%= link_to 'Dashboard', dashboard_path, :class => 'nav-link' %>
         </li>
-         <li class="nav-item">
-          <%= link_to 'Logout', '', :class => 'nav-link' %>
+         <li class="nav-item mb-2">
+          <%= link_to 'Logout', '/logout', :class => 'nav-link' %>
         </li>
+        <% if current_user.present? %>
+        <li class="nav-item ml-2">
+          <%= image_tag("#{current_user.image}", :alt => "Profile Picture", :style => "border-radius: 50%; width:3em; height:3em;")%>
+        </li>
+        <% end %>
         </li>
       </ul>
     </div>
