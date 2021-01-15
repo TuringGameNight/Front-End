@@ -84,7 +84,7 @@ Our API calls are handles by our microservice Sinatra App [here](https://github.
 
 ## Testing
 
-**Testing status:** As of 1/14/2021, this repo is at 97.68% coverage, per SimpleCov
+**Testing status:** As of 1/15/2021, this repo is at 96.3% coverage, per SimpleCov
 
 **How to run the test suite**
 
