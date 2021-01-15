@@ -21,6 +21,8 @@ Rails.application.routes.draw do
 
   namespace :users do
     post '/games', to: 'games#create'
+    post '/friends', to: 'friends#create'
+    patch '/:user_id/friends/:friend_id', to: 'friends#update'
   end
 
 end

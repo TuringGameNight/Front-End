@@ -25,7 +25,7 @@ gem 'jquery-rails'
 gem 'faraday'
 gem 'figaro'
 gem 'travis'
-gem 'omniauth', "~>1.9"
+gem 'omniauth', '~>1.9'
 gem 'omniauth-google-oauth2'
 gem 'bootstrap', '~> 4.0.0'
 gem 'activerecord-session_store'
