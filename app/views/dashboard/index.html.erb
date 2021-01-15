@@ -48,6 +48,21 @@
           <% end %>
         </ul>
       </div>
+      <div class="container invitations">
+        <h4>Pending Invitations</h4>
+        <ul class="row mt-3">
+          <% if @game_night_invites %>
+            <% @game_night_invites.each do |invite| %>
+              <li class="card m-3 p-2">Host Name: <%= invite.host_name %><br>
+                Date: <%= invite.date %><br>
+                # of Games: <%= invite.number_of_games %><br>
+                <%= button_to "Accept", "/users/#{@user.id}/invitations/#{invite.id}/", method: :patch, class: "btn btn-success shadow" %>
+                <%= button_to "Decline", "/users/#{@user.id}/invitations/#{invite.id}/", method: :delete, class: "btn btn-danger shadow" %>
+              </li>
+            <% end %>
+          <% end %>
+        </ul>
+      </div>
     </div>
 
     <div class="uniform-app-card shadow p-3 pop-out col-md card m-3 align-items-center scroll shadow-4" id="friends">
