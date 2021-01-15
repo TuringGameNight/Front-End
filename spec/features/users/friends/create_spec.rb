@@ -45,7 +45,7 @@ describe 'as an authenticated user' do
       fill_in :friend_email, with: 'flo@progressive.com'
       click_button('Add Friend')
       expect(current_path).to eq(dashboard_path)
-      save_and_open_page
+
       within('#pending_friends') do
         expect(page).to have_content(@user_2.name)
         expect(page).to have_content('Pending')
