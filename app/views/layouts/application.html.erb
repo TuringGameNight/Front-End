@@ -14,16 +14,50 @@
 
 <body>
   <% unless current_page?(root_path) %>
-    <%= render 'layouts/navigation' %>
+  <%= render 'layouts/navigation' %>
   <% end %>
   <% flash.each do |name, msg| %>
-  <div class="<%=name%>-flash">
-    <p><%= msg %></p>
+  <div class="container-fluid text-center">
+    <div class="row justify-content-center">
+      <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+        <div class="new-message-box">
+          <% if name == "error" %>
+          <div class="new-message-box-alert fade-in" style="fadeOut(3000);">
+            <div class="info-tab tip-icon-alert" title="error"><i></i></div>
+            <div class="tip-box-alert">
+              <p><%= msg %></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
+  <% else name == "success" %>
+  <div class="new-message-box-success fade-in">
+    <div class="info-tab tip-icon-success" title="success"><i></i></div>
+    <div class="tip-box-success">
+      <p><%= msg %></p>
+    </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+
   <% end %>
+  <% end %>
+
+
   <main role="main">
     <%= content_for?(:content) ? yield(:content) : yield %>
   </main>
 </body>
 
 </html>
+
+
+
+
+
+
+</div>
