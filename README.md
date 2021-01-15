@@ -6,7 +6,7 @@
 
 Plan your next game night with GameNight! With this app you can add games to your shelf, get your friends to do the same, and when it is time to plan a game night, leave the planning to us. We will get all the games collated and allow your party to vote on the game(s) you want to play before the game night!
 
-![Game-Night-Logo](https://user-images.githubusercontent.com/56360157/104666308-cd9f9880-5690-11eb-82bf-8a23213a9a64.jpg)
+![gamenight-logo2](https://user-images.githubusercontent.com/4582791/104680627-925f9280-56ad-11eb-9f2e-379b773a6320.png)
 
 ## Table of Contents
 
