@@ -46,6 +46,7 @@ class UserService
     }
 
     conn = Faraday.new("#{ENV['BACKEND_URL']}/api/v1/users/#{user_id}/friends")
+
     response = conn.post do |request|
       request.body = JSON.generate(body)
     end
