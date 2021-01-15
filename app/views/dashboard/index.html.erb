@@ -24,7 +24,14 @@
       <div class="container">
         <ul class="row mt-3">
           <% @games.each do |game| %>
-            <li class="card m-3 p-2"><%= game.name %></li>
+          <div class="row">
+            <div class="panel panel-danger">
+              <div class="panel-heading"><%= game.name %>
+                <div class="pannel-body"><img src="<%= game.image %>" alt="<%= game.name%>" width=50%></div>
+                <div class="panel m-5"> </div>
+              </div>
+            </div>
+          </div>
           <% end %>
         </ul>
       </div>
@@ -37,7 +44,7 @@
       <div class="container">
         <ul class="row mt-3">
           <% @game_nights.each do |game_night| %>
-            <li class="card m-3 p-2"><%= game_night.name %></li>
+            <li class="card m-3 p-2"><%= link_to game_night.name, "/game-nights/#{game_night.id}" %></li>
           <% end %>
         </ul>
       </div>
