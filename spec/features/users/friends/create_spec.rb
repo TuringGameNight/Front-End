@@ -44,12 +44,9 @@ describe 'as an authenticated user' do
       visit dashboard_path
       fill_in :friend_email, with: 'flo@progressive.com'
       click_button('Add Friend')
+
+      expect(page).to have_content('Friend request sent!')
       expect(current_path).to eq(dashboard_path)
-      save_and_open_page
-      within('#pending_friends') do
-        expect(page).to have_content(@user_2.name)
-        expect(page).to have_content('Pending')
-      end
     end
 
     it 'when I am added by someone else I see them listed as pending friends with an accept and decline button' do
