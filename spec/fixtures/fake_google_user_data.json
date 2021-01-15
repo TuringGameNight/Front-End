@@ -1,0 +1,16 @@
+{
+  "data": {
+      "id": "200",
+      "type": "user",
+      "attributes": {
+        "id": "200",
+        "google_id": "2000000000000000",
+        "name": "Jake",
+        "email": "jake@statefarm.com",
+        "image": "image_url",
+        "token_expiration": "30",
+        "auth_token": "MOCK_OMNIAUTH_GOOGLE_TOKEN",
+        "refresh_token": "MOCK_OMNIAUTH_GOOGLE_REFRESH TOKEN"
+      }
+  }
+}

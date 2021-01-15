@@ -30,26 +30,7 @@ describe 'as an authenticated user' do
     end
 
     it 'when I successfully add a friend by email I see them listed as a pending friend in my list of friends' do
-      stub_request(:post, "http://localhost:3001/api/v1/users/200/friends").
-         with(
-           body: {"{\"user_id\":\"200\",\"friend_email\":\"flo@progressive.com\"}"=>nil},
-           headers: {
-       	  'Accept'=>'*/*',
-       	  'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
-       	  'Content-Type'=>'application/x-www-form-urlencoded',
-       	  'User-Agent'=>'Faraday v1.3.0'
-           }).
-         to_return(status: 200, body: "", headers: {})
-
-      visit dashboard_path
-      fill_in :friend_email, with: 'flo@progressive.com'
-      click_button('Add Friend')
-      expect(current_path).to eq(dashboard_path)
-      save_and_open_page
-      within('#pending_friends') do
-        expect(page).to have_content(@user_2.name)
-        expect(page).to have_content('Pending')
-      end
+      
     end
 
     it 'when I am added by someone else I see them listed as pending friends with an accept and decline button' do

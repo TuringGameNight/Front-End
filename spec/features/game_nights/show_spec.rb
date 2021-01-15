@@ -37,9 +37,7 @@ describe 'As a user' do
 
       expect(page).to have_link('Gloomhaven')
     end
-
-    xit 'If I am not a part of the game night, I cannot see the details' do
-      # needs current user data
-    end
+    # Sad path idea is to ensure people that are not a
+    # part of the game night can't see the game night details
   end
 end

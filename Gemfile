@@ -29,6 +29,9 @@ gem 'omniauth', '~>1.9'
 gem 'omniauth-google-oauth2'
 gem 'bootstrap', '~> 4.0.0'
 gem 'activerecord-session_store'
+gem "actionpack-page_caching"
+gem "actionpack-action_caching"
+
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password

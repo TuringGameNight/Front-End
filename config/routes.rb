@@ -23,6 +23,7 @@ Rails.application.routes.draw do
     post '/games', to: 'games#create'
     post '/friends', to: 'friends#create'
     patch '/:user_id/friends/:friend_id', to: 'friends#update'
+    delete '/:user_id/friends/:friend_id', to: 'friends#destroy'
   end
 
 end
