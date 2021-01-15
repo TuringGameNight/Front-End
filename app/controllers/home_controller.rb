@@ -1,5 +1,4 @@
 class HomeController < ApplicationController
-
   caches_action :index
 
   def index
