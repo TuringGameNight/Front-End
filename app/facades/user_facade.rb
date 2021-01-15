@@ -5,6 +5,7 @@ class UserFacade
 
   def self.get_friends(user_id)
     json = UserService.get_friends(user_id)
+    binding.pry
     json[:data][:attributes][:accepted_friends].map do |data|
       Friend.new(data)
     end
@@ -28,6 +29,16 @@ class UserFacade
     json = UserService.get_game_nights(user_id)
     json[:data].map do |data|
       GameParty.new(data)
+    end
+  end
+
+  def self.get_game_night_invites(user_id)
+    json = UserService.get_game_night_invites(user_id)
+    unless json[:data] == []
+      invites = json[:data][:relationships][:invitations][:data]
+      invites.map do |data|
+        Invite.new(data)
+      end
     end
   end
 

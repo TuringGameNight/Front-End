@@ -12,12 +12,9 @@
 
   <%= f.label :number_of_games, style: "text-align: center;" %>
   <%= f.number_field :number_of_games, value: params[:number_of_games]%><br>
-  <h3><br>Add Friends: </h3>
-  <% if @friends.empty? %>
-    <p><i>Awww. We don't see any friends. </i><br>Please add some buddies on your dashboard before you make a party. </p>
-  <% else %>
-    <%= f.collection_check_boxes :friends, @friends, :id, :name %>
-  <% end %>
+
+  <%= f.collection_check_boxes :friends, @friends, :id, :name %>
+
   <%= f.submit "Let's Play!", class: "btn btn-primary shadow"%>
   <% end %>
 </div>
