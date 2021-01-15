@@ -1,6 +1,8 @@
 class Games::SearchController < ApplicationController
   before_action :is_user
 
+  caches_action :new
+
   def new; end
 
   def index
