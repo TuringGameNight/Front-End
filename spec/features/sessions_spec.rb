@@ -5,7 +5,7 @@ describe 'Session spec', type: :feature do
     before :each do
       json_response1 = File.read('spec/fixtures/fake_google_user_data.json')
       stub_request(:post, "#{ENV['BACKEND_URL']}/api/v1/users")
-      .to_return(status: 200, body: json_response1)
+        .to_return(status: 200, body: json_response1)
 
       friends_response = File.read('spec/fixtures/new_friends_data.json')
       stub_request(:get, "#{ENV['BACKEND_URL']}/api/v1/users/200/friends")
@@ -18,7 +18,6 @@ describe 'Session spec', type: :feature do
       game_nights_response = File.read('spec/fixtures/new_users_game_nights.json')
       stub_request(:get, "#{ENV['BACKEND_URL']}/api/v1/users/200/game_nights")
         .to_return(status: 200, body: game_nights_response)
-
 
       json = JSON.parse(json_response1, symbolize_names: true)
       @user = User.new(json)
