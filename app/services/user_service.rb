@@ -63,4 +63,15 @@ require "pry"; binding.pry
       request.body = JSON.generate(body)
     end
   end
+
+  def self.decline_friend_request(user_id, friend_id)
+    body = {
+      user_id: user_id,
+      friend_id: friend_id
+    }
+    conn = Faraday.new("#{ENV['BACKEND_URL']}/api/v1/users/#{user_id}/friends/#{friend_id}")
+    response = conn.delete do |request|
+      request.body = JSON.generate(body)
+    end
+  end
 end
