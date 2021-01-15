@@ -20,6 +20,8 @@ Rails.application.routes.draw do
   end
 
   namespace :users do
+    delete '/:user_id/invitations/:invite_id', to: 'invitations#destroy'
+    patch '/:user_id/invitations/:invite_id', to: 'invitations#update'
     post '/games', to: 'games#create'
     post '/friends', to: 'friends#create'
     patch '/:user_id/friends/:friend_id', to: 'friends#update'
