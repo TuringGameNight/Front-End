@@ -19,6 +19,10 @@ describe 'Session spec', type: :feature do
       stub_request(:get, "#{ENV['BACKEND_URL']}/api/v1/users/200/game_nights")
         .to_return(status: 200, body: game_nights_response)
 
+      game_nights_invites = File.read('spec/fixtures/invites.json')
+      stub_request(:get, "#{ENV['BACKEND_URL']}/api/v1/users/200/invitations")
+        .to_return(status: 200, body: game_nights_invites)  
+
       json = JSON.parse(json_response1, symbolize_names: true)
       @user = User.new(json)
     end

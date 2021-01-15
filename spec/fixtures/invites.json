@@ -1,0 +1,12 @@
+{"data":
+  [{"id": "1",
+    "type":"invitation",
+    "attributes":
+     {"id": 1,
+      "game_night":
+       {"game_night_id": 1,
+        "name":"Test Game Night",
+        "date": "09-21-2021",
+        "number_of_games": 2,
+        "host": "Phil",
+        "host_id": 2}}}]}

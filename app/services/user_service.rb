@@ -74,4 +74,21 @@ class UserService
       request.body = JSON.generate(body)
     end
   end
+
+  def self.get_game_night_invites(user_id)
+   conn = Faraday.new("#{ENV['BACKEND_URL']}/api/v1/users/#{user_id}/invitations")
+   results = conn.get
+   JSON.parse(results.body, symbolize_names: true)
+ end
+
+ def self.accept_game_night_invite(invite_id)
+   body = {
+     id: invite_id,
+     status: 'accepted'
+   }
+   conn = Faraday.new("#{ENV['BACKEND_URL']}/api/v1/invitations/#{invite_id}")
+   conn.patch do |request|
+     request.body = JSON.generate(body)
+   end
+ end
 end

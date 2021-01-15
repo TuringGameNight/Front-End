@@ -43,4 +43,17 @@ class UserFacade
     json = UserService.decline_friend_request(user_id, friend_id)
   end
 
+  def self.get_game_night_invites(user_id)
+   json = UserService.get_game_night_invites(user_id)
+   unless json[:data] == []
+     invites = json[:data]
+     invites.map do |data|
+       Invite.new(data)
+     end
+   end
+ end
+ 
+ def self.accept_game_night_invite(invite_id)
+   json = UserService.accept_game_night_invite(invite_id)
+ end
 end

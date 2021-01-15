@@ -21,6 +21,11 @@ describe 'As a user' do
       friends_response = File.read('spec/fixtures/new_friends_data.json')
       stub_request(:get, "#{ENV['BACKEND_URL']}/api/v1/users/200/friends")
         .to_return(status: 200, body: friends_response)
+
+      game_nights_invites = File.read('spec/fixtures/invites.json')
+      stub_request(:get, "#{ENV['BACKEND_URL']}/api/v1/users/200/invitations")
+        .to_return(status: 200, body: game_nights_invites)
+          
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
     end
 

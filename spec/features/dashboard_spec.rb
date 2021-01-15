@@ -21,6 +21,11 @@ describe 'As an authenticated user' do
       stub_request(:get, "#{ENV['BACKEND_URL']}/api/v1/users/200/game_nights")
         .to_return(status: 200, body: game_nights_response)
 
+      game_nights_invites = File.read('spec/fixtures/invites.json')
+      stub_request(:get, "#{ENV['BACKEND_URL']}/api/v1/users/200/invitations")
+        .to_return(status: 200, body: game_nights_invites)
+
+
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
     end
 
