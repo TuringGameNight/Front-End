@@ -13,7 +13,9 @@
 </head>
 
 <body>
-  <%= render 'layouts/navigation' %>
+  <% unless current_page?(root_path) %>
+    <%= render 'layouts/navigation' %>
+  <% end %>
   <% flash.each do |name, msg| %>
   <div class="<%=name%>-flash">
     <p><%= msg %></p>
