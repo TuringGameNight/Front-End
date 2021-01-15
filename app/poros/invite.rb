@@ -9,7 +9,7 @@ class Invite
 
   def initialize(data)
     @id = data[:id].to_i
-    @host_name = data[:attributes][:game_night][:host_name]
+    @host_name = data[:attributes][:game_night][:host]
     @name = data[:attributes][:game_night][:name]
     @date = data[:attributes][:game_night][:date]
     @host_id = data[:attributes][:game_night][:host_id]
