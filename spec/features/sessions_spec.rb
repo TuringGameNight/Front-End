@@ -6,6 +6,7 @@ describe 'Session spec', type: :feature do
       json_response1 = File.read('spec/fixtures/fake_google_user_data.json')
       stub_request(:post, "#{ENV['BACKEND_URL']}/api/v1/users")
       .to_return(status: 200, body: json_response1)
+
       friends_response = File.read('spec/fixtures/new_friends_data.json')
       stub_request(:get, "#{ENV['BACKEND_URL']}/api/v1/users/200/friends")
         .to_return(status: 200, body: friends_response)
@@ -18,21 +19,27 @@ describe 'Session spec', type: :feature do
       stub_request(:get, "#{ENV['BACKEND_URL']}/api/v1/users/200/game_nights")
         .to_return(status: 200, body: game_nights_response)
 
-      stub_omniauth
+
       json = JSON.parse(json_response1, symbolize_names: true)
       @user = User.new(json)
-
-      visit root_path
-
-      click_link 'Login with Google'
     end
 
     it 'I can log in' do
+      stub_omniauth
+      visit root_path
+
+      click_link 'Login with Google'
+
       expect(current_path).to eq(dashboard_path)
       expect(page).to have_content('Welcome Jake!')
     end
 
     it 'I can logout' do
+      stub_omniauth
+      visit root_path
+
+      click_link 'Login with Google'
+
       visit logout_path
       expect(current_path).to eq(root_path)
     end
