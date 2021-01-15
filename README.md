@@ -94,6 +94,8 @@ Our API calls are handles by our microservice Sinatra App [here](https://github.
 - Add more sad path testing
 - Users can see the game nights they are not invited to
 - The user's list of games in the session doesn't immediately update when they add a game
+- Due to the above, you can add more than one of the same game
+- Selecting people to invite doesn't translate to the game night creation, all user friends are added.
 
 ## Roadmap
 
