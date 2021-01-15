@@ -16,8 +16,9 @@ class Users::FriendsController < ApplicationController
     response = UserFacade.accept_friend_request(params[:user_id], params[:friend_id])
     redirect_to dashboard_path
   end
-  #
-  # def destroy
-  #
-  # end
+
+  def destroy
+    UserFacade.decline_friend_request(params[:user_id], params[:friend_id])
+    redirect_to dashboard_path
+  end
 end
