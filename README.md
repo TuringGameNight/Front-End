@@ -57,7 +57,7 @@ If you know a contributor, you can ask one of us for the client ID and secret.
 
 ## Features
 
-[ADD VIDEO]
+[![Login and Add Game](https://media3.giphy.com/media/Vm5LAvl7Rz5QU0DM8d/200w.webp)](https://media.giphy.com/media/Vm5LAvl7Rz5QU0DM8d/source.mp4)
 
 ### Google OAuth
 Authentication is taken care of by Google OAuth. Users may login with their Google account info by using the link on the home page.
@@ -68,6 +68,8 @@ After authenticating/logging in, a user is taken to their dashboard where they c
     * Create game nights and accept/decline game night invites
     * Add friends, and accept/decline friend requests
     * View and add games to their shelf
+
+[![Add Game Night](https://media3.giphy.com/media/e3IwI95S9iEMUuznXO/200w.webp)](https://media.giphy.com/media/e3IwI95S9iEMUuznXO/source.mp4)
 
 ### Game Search
 
