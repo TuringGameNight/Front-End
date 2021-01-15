@@ -20,6 +20,11 @@ describe 'As a user' do
       game_nights_response = File.read('spec/fixtures/new_users_game_nights.json')
       stub_request(:get, "#{ENV['BACKEND_URL']}/api/v1/users/200/game_nights")
         .to_return(status: 200, body: game_nights_response)
+
+      game_nights_invites = File.read('spec/fixtures/invites.json')
+      stub_request(:get, "#{ENV['BACKEND_URL']}/api/v1/users/200/invitations")
+        .to_return(status: 200, body: game_nights_invites)
+
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
     end
 
@@ -39,7 +44,7 @@ describe 'As a user' do
       fill_in :image, with: 'https://boardgamegeek.com/image/3918905/everdell'
 
       click_on 'Suggest Game'
-      
+
       expect(page).to have_content('Game created successfully and added to your shelf!')
       expect(current_path).to eq(dashboard_path)
     end
